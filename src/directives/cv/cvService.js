@@ -65,6 +65,20 @@ function cvService() {
 		},
 
 		template: `
+		<style>
+			h3.w3l_head.two {
+				color: #fb9902;
+			}
+
+			#services p.w3ls_head_para {
+				color: white;
+				text-shadow: 1px 1px black;
+			}
+
+			.list-gds h4 {
+				color: #fb9902;
+			}
+		</style>
 		<div class="service" id="services">
 	    	<div class="container">
 		 		<h3 class="w3l_head two">{{title}}</h3>

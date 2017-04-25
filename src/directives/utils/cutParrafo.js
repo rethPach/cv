@@ -60,15 +60,16 @@ function cutParrafo() {
 					border-radius: 0px;
 					background: rgba(6, 70, 97, 0.95);
 					color: white;
+					text-shadow: 1px 1px black;
 				}
 
 				.modal-body {
 					padding: 0px 40px 40px 40px;
-
 				}
 
 				.modal-title {
 					text-align: center;
+					color: #fb9902;
 				}
 
 				.parrafo {

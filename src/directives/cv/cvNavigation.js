@@ -7,6 +7,11 @@ function cvNavigation() {
 		},
 
 		template: `
+		<style>
+			.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+				color: #fb9902 !important;
+			}
+		</style>
 		<div class="w3_navigation">
 
 			<div class="container">
@@ -44,18 +49,18 @@ function cvNavigation() {
 								</link-scroll>
 
 								<link-scroll 
-									href="{{'education'}}" 
-									text="{{'Lenguajes'}}">
-								</link-scroll>
-
-								<link-scroll 
-									href="{{'gallery'}}" 
-									text="{{'Herramientas'}}">
-								</link-scroll>
-
-								<link-scroll 
-									href="{{'mail'}}" 
+									href="{{'experiencia'}}" 
 									text="{{'Experiencia'}}">
+								</link-scroll>
+
+								<link-scroll 
+									href="{{'habilidades'}}" 
+									text="{{'Habilidades'}}">
+								</link-scroll>
+
+								<link-scroll 
+									href="{{'contacto'}}" 
+									text="{{'Contacto'}}">
 								</link-scroll>
 							</ul>
 

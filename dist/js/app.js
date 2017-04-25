@@ -41888,10 +41888,10 @@ var factory = require('./core/ModuleFactory');
 factory.create(angular, {
 	name: 'app',
 	dependencies: [require('angular-bootstrap-npm')],
-	directives: [require('./directives/cutParrafo'), require('./directives/cvMain'), require('./directives/cvNavigation'), require('./directives/cvAbout'), require('./directives/cvService'), require('./directives/cvExperiencia'), require('./directives/herramientaHelper'), require('./directives/cvLenguajes'), require('./directives/cvHerramientas'), require('./directives/cvAptitudes'), require('./directives/linkScroll')]
+	directives: [require('./directives/cv/cvMain'), require('./directives/cv/cvNavigation'), require('./directives/cv/cvAbout'), require('./directives/cv/cvService'), require('./directives/cv/cvExperiencia'), require('./directives/cv/cvFooter'), require('./directives/cv/cvLenguajes'), require('./directives/cv/cvAptitudes'), require('./directives/utils/cutParrafo'), require('./directives/utils/herramientaHelper'), require('./directives/utils/linkScroll'), require('./directives/utils/experienciaHelper'), require('./directives/utils/descripcionExperiencia'), require('./directives/utils/habilidad')]
 });
 
-},{"./core/ModuleFactory":5,"./directives/cutParrafo":6,"./directives/cvAbout":7,"./directives/cvAptitudes":8,"./directives/cvExperiencia":9,"./directives/cvHerramientas":10,"./directives/cvLenguajes":11,"./directives/cvMain":12,"./directives/cvNavigation":13,"./directives/cvService":14,"./directives/herramientaHelper":15,"./directives/linkScroll":16,"angular":3,"angular-bootstrap-npm":1}],5:[function(require,module,exports){
+},{"./core/ModuleFactory":5,"./directives/cv/cvAbout":6,"./directives/cv/cvAptitudes":7,"./directives/cv/cvExperiencia":8,"./directives/cv/cvFooter":9,"./directives/cv/cvLenguajes":10,"./directives/cv/cvMain":11,"./directives/cv/cvNavigation":12,"./directives/cv/cvService":13,"./directives/utils/cutParrafo":14,"./directives/utils/descripcionExperiencia":15,"./directives/utils/experienciaHelper":16,"./directives/utils/habilidad":17,"./directives/utils/herramientaHelper":18,"./directives/utils/linkScroll":19,"angular":3,"angular-bootstrap-npm":1}],5:[function(require,module,exports){
 "use strict";
 
 function Modulo(angular, settings) {
@@ -41989,6 +41989,253 @@ module.exports = {
 },{}],6:[function(require,module,exports){
 'use strict';
 
+function cvAbout() {
+	return {
+		link: function link() {},
+
+		template: '\n\t\t<style>\n\t\t\th3.w3l_head {\n\t\t\t\tcolor: #525252;\n\t\t\t}\n\n\t\t\tp.w3ls_head_para  {\n\t\t\t\tcolor: #064661;\n\t\t\t}\n\n\t\t\t.w3ls-agile-left-info {\n\t\t\t\tborder-bottom: 1px solid #525252;\n\t\t\t}\n\t\t\t\n\t\t\t.w3ls-agile-left-info a, .education-agile-w3l-year h6 {\n\t\t\t\tcolor: #525252;\n\t\t\t}\n\n\t\t\t.education-agile-w3l-year {\n\t\t\t    border-left: 2px solid #fb9902;\n\t\t\t}\n\n\t\t\th4 .btn-link {\n\t\t\t\tcolor: #fb9902\n\t\t\t}\n\n\t\t</style>\n\t\t<div class="about" id="about">\n\t\t\t<div class="container">\n\t\t\t\t<h3 class="w3l_head">Sobre Mi</h3>\n\t\t\t\t<p class="w3ls_head_para">Informacion Personal.</p>\n\t\t\t\t<div class="w3l-grids-about">\n\t\t\t\t\t<div class="col-md-5 w3ls-ab-right">\n\t\t\t\t\t\t<div class="agile-about-right-img">\n\t\t\t\t\t\t\t<img src="dist/images/ab.jpg" alt="">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="col-md-7 w3ls-agile-left">\n\t\t\t\t\t\t<div class="w3ls-agile-left-info">\n\t\t\t\t\t\t\t<h4>Nombre</h4>\n\t\t\t\t\t\t\t<p>Nazareth Pacheco</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="w3ls-agile-left-info">\n\t\t\t\t\t\t\t<h4>Sexo</h4>\n\t\t\t\t\t\t\t<p>Masculino</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="w3ls-agile-left-info">\n\t\t\t\t\t\t\t<h4>Direccion</h4>\n\t\t\t\t\t\t\t<p>Caracas</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="w3ls-agile-left-info">\n\t\t\t\t\t\t\t<h4>Email</h4>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<a href="mailto:nazarethj.pacheco@gmail.com">\n\t\t\t\t\t\t\t\t\tnazarethj.pacheco@gmail.com\n\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="w3ls-agile-left-info">\n\t\t\t\t\t\t\t<h4>Hobbies</h4>\n\t\t\t\t\t\t\t<p>Cocinar, Baloncesto, Robotica, Comics, Cine, Open Ecology.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="clearfix"> </div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t'
+	};
+}
+
+module.exports = {
+	name: 'cvAbout',
+	func: cvAbout
+};
+
+},{}],7:[function(require,module,exports){
+'use strict';
+
+function cvAptitudes() {
+	return {
+		link: function link($scope) {},
+		template: '\n\t\t<div class="education" id="experiencia">\n\t    \t\n\t    \t<cv-experiencia></cv-experiencia>\n\n\t\t\t<div class="education" id="education">\n\n\t\t\t\t<cv-lenguajes></cv-lenguajes>\n\n\t\t\t</div>\n\n\t \t\t<div class="clearfix"> </div>\n\n\t\t</div>\n\t\t'
+	};
+}
+
+module.exports = {
+	name: 'cvAptitudes',
+	func: cvAptitudes
+};
+
+},{}],8:[function(require,module,exports){
+'use strict';
+
+function cvExperiencia() {
+	return {
+		link: function link($scope, el) {
+			$scope.experiencias = [{
+				empresa: 'Medinet',
+				duracion: 'Enero 2017 - Abril 2017',
+				cargo: 'Fullstack-web developer team leader, scrum master padawan.',
+				works: [{
+
+					descripcion: [['Desarrollo de aplicación Business Inteligence que mostraba el', 'tiempo laboral: efectivo, perdido, sobretiempo;', 'de un empleado administrativo x en un rango tiempo x;', 'acomplandome a un lector de tarjetas(Entrada/Salida).'].join(' ')],
+
+					herramientas: 'ASP.net MVC, C#, Angular js Como Capa de presentación.'
+				}, {
+					descripcion: [['Desarrollo de un CMS Ecommerce con la integración de una', 'pasarela de pago (123Pago). El negocio consistía en venta de', 'boletos, control del inventario de: boletos vendidos,', 'disponibles, ofertados; validación del boleto a través de un', 'código seguridad generado por la aplicación.'].join(' '), ['Proyecto legacy, donde aterrice y puse a prueba de', 'manera satisfactoria conceptos de refactoring.'].join(' ')],
+
+					herramientas: 'Java, Javascript, Spring Framework, Angular Js como capa de presentación.'
+				}]
+			}, {
+				empresa: 'Soluciones As',
+				duracion: 'Mayo 2016 - Enero 2017',
+				cargo: 'Fullstack-web developer team leader, scrum master padawan.',
+				works: [{
+					descripcion: [['Desarrollo de una aplicación de venta de boletos sobre', 'eventos, para cliente en argentina. El negocio era bastante', 'similar al mencionado en la experiencia anterior,', 'con la particularidad que la validación del boleto', 'era a través de un app Mobile que desarrolle con Ionic esta', 'escaneaba un código Qr asociado a una entrada y Validadaba la entradada.', 'Adicionalmente incluía una Session Bussiness Inteligence que mostraba', 'información relacionada a:', 'boletos vendidos,', 'boletos ofertados y boletos disponibles.', 'Reportes de asistencia para un evento.'].join(' ')],
+
+					herramientas: 'Javascript, Laravel 5,Angular Js como capa de presentación.'
+				}]
+			}, {
+				empresa: 'Freelance',
+				duracion: 'Febrero 2013 - Mayo 2016',
+				cargo: 'Fullstack-web Developer.',
+				works: [{
+					descripcion: [['Desarrollo de un ecommerce para venta y alquiler de', 'equipos para ferreteria y construccion'].join(' ')],
+					herramientas: 'PHP, Javascript, Cake, Jquery.'
+				}, {
+					descripcion: [['Desarrollo de help desk para la gestión de incidencias', 'dirigidas a un departamento de soporte técnico, asignación de', 'tickets para analistas implementando algoritmo round robin'].join(' ')],
+					herramientas: 'PHP, Javascript, Codeigniter, JQuery UI.'
+				}, {
+					descripcion: [['Desarrollo de una aplicación de mensajería interna,', 'gestor de memorándums y micronotas'].join(' ')],
+					herramientas: 'PHP, Javascript, Codeigniter, JQuery UI.'
+				}, {
+					descripcion: [['Desarrollo de una aplicación para la gestión de préstamos, y', 'solicitud de libros para una biblioteca.'].join(' ')],
+					herramientas: 'PHP, Javascript, Codeigniter, JQuery UI.'
+				}]
+			}];
+		},
+		template: '\n\t\t<style>\n\n\t\t\t.divider {\n\t\t\t\tborder-top: 1px solid #ddd;\n\t\t\t}\n\n\t\t\t.education-agile-w3l-info__content {\n\t\t\t\tdisplay: none;\n\t\t\t}\n\t\t\t\n\t\t\t.education-agile-w3l-info {\n\t\t\t\tfloat: left;\n\t\t\t}\n\n\t\t\t.education-agile-w3l {\n\t\t\t\tmargin: 40px 0px;\n\t\t\t}\n\n\t\t\th3.w3l_head.three {\n\t\t\t\tcolor: #525252\n\t\t\t}\n\t\t\t\n\t\t</style>\n\t\t<div class="col-md-12 education-w3l">\n\t\t\t<h3 class="w3l_head three">Experiencia</h3>\n\t\t\t<div class="education-agile-grids">\n\t\t\t\t<experiencia-helper\n\t\t\t\t\tng-repeat="experiencia in experiencias" \n\t\t\t\t\tempresa="{{experiencia.empresa}}"\n\t\t\t\t\tduracion="{{experiencia.duracion}}"\n\t\t\t\t\tcargo="{{experiencia.cargo}}"\n\t\t\t\t\tworks="experiencia.works">\n\t\t\t\t</experiencia-helper>\n\t\t\t</div>\n\t\t</div>\n\t\t'
+	};
+}
+
+module.exports = {
+	name: 'cvExperiencia',
+	func: cvExperiencia
+};
+
+},{}],9:[function(require,module,exports){
+'use strict';
+
+function cvFooter() {
+	return {
+		controller: function controller($scope) {
+
+			$scope.direccion = {
+				key: 'Direccion',
+				value: 'Caracas, Venezuela'
+			}, $scope.email = {
+				key: 'Email',
+				value: 'naiger67@gmail.com',
+				mailto: 'mailto:naiger67@gmail.com'
+			};
+
+			$scope.llamar = {
+				key: 'Telefonos',
+				value: '02125374003'
+			};
+		},
+		template: '\n\t\t<style>\n\n\t\t\t.w3l_footer {\n\t\t\t\tbackground: #525252\n\t\t\t}\n\n\t\t\t.w3ls_footer_grid_leftr h4 {\n\t\t\t\t\n\t\t\t}\n\n\t\t\t.w3ls_footer_grid_left:hover .w3ls_footer_grid_leftl {\n\t\t\t\tcolor: #fb9902\n\t\t\t}\n\n\t\t\t.w3ls_footer_grid_leftl {\n\t\t\t\tbackground: #064661;\n\t\t\t}\n\n\t\t\t.w3ls_footer_grid_left:hover .w3ls_footer_grid_leftr h4 {\n\t\t\t\tcolor: #fb9902\n\t\t\t}\n\n\t\t</style>\n\t\t<div class="w3l_footer" id="contacto">\n\t\t\t<div class="container">\n\t\t\t\t\n\t\t\t\t<div class="w3ls_footer_grids">\n\t\t\t\t\t\n\t\t\t\t\t<div class="w3ls_footer_grid">\n\t\t\t\t\t\t<div class="col-md-4 w3ls_footer_grid_left">\n\t\t\t\t\t\t\t<div class="w3ls_footer_grid_leftl">\n\t\t\t\t\t\t\t\t<i class="fa fa-map-marker" aria-hidden="true"></i>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class="w3ls_footer_grid_leftr">\n\t\t\t\t\t\t\t\t<h4>{{direccion.key}}</h4>\n\t\t\t\t\t\t\t\t<p>{{direccion.value}}</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class="clearfix"> </div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="col-md-4 w3ls_footer_grid_left">\n\t\t\t\t\t\t\t<div class="w3ls_footer_grid_leftl">\n\t\t\t\t\t\t\t\t<i class="fa fa-envelope" aria-hidden="true"></i>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class="w3ls_footer_grid_leftr">\n\t\t\t\t\t\t\t\t<h4>{{email.key}}</h4>\n\t\t\t\t\t\t\t\t<a href="{{email.mailto}}">{{email.value}}</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class="clearfix"> </div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="col-md-4 w3ls_footer_grid_left">\n\t\t\t\t\t\t\t<div class="w3ls_footer_grid_leftl">\n\t\t\t\t\t\t\t\t<i class="fa fa-phone" aria-hidden="true"></i>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class="w3ls_footer_grid_leftr">\n\t\t\t\t\t\t\t\t<h4>{{llamar.key}}</h4>\n\t\t\t\t\t\t\t\t<p>{{llamar.value}}</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class="clearfix"> </div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="clearfix"> </div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t'
+	};
+}
+
+module.exports = {
+	name: 'cvFooter',
+	func: cvFooter
+};
+
+},{}],10:[function(require,module,exports){
+'use strict';
+
+function cvLenguajes() {
+
+	return {
+		link: function link($scope) {
+			$scope.habilidades = [{
+				title: 'PHP',
+				skills: ['Laravel', 'Symfony', 'Codeigniter', 'Doctrine', 'Composer', 'Cake']
+			}, {
+				title: 'Javascript',
+				skills: ['Angular', 'Backbone', 'Bower', 'Gulp', 'Borwserify', 'Node']
+			}, {
+				title: 'C#',
+				skills: ['Asp.net MVC 5', 'LINQ', 'Entitie Framework', 'Visual Studio 2015', '-', '-']
+			}, {
+				title: 'Java',
+				skills: ['JSP', 'Servlets', 'JSF', 'JPA', 'Spring', '-']
+			}, {
+				title: 'Commons',
+				skills: ['HTML', 'CSS', 'SQL', 'Git', 'Linux', 'Apache']
+			}, {
+				title: 'Metodologias',
+				skills: ['SCRUM', 'eXtreme Programming', '-', '-', '-', '-']
+			}];
+		},
+		template: '\n\t\t<style>\n\t\t\t.skills {\n\t\t\t\tpadding-top: 64px;\n\t\t\t}\n\n\t\t\t.skills__content {\n\t\t\t\tmargin-top: 32px;\n\t\t\t\tpadding: 0px 64px;\n\t\t\t}\n\t\t\t\n\t\t\t.panel {\n\t\t\t\tborder-radius: 0px;\n\t\t\t\tborder: 1px solid #064661;\n\t\t\t\tbackground: transparent;\n\t\t\t}\n\n\t\t\t.skills__content .panel .panel-heading {\n\t\t\t\tbackground: #064661;\n\t\t\t\tcolor: #fb9902;\n\t\t\t}\n\n\t\t\t.list-group li {\n\t\t\t\tfont-size: .7em;\n\t\t\t\tcolor: #064661;\n\t\t\t\tbackground-color: #F3F3F3;\n\t\t\t}\n\n\t\t\t.panel-heading .panel-title {\n\t\t\t    white-space: nowrap;\n\t\t\t    overflow: hidden;\n\t\t\t    text-overflow: ellipsis;\n\t\t\t    line-height: normal;\n\t\t\t    width: 75%;\n\t\t\t    padding-top: 8px;\n\t\t\t}\n\n\t\t</style>\n\t\t<div class="col-md-12 skills" id="habilidades">\n\n\t\t\t<h3 class="w3l_head two">Habilidades</h3>\n\t     \t\n\t\t\t<div class="row skills__content">\n\t\t\t\t\n\t\t\t\t<habilidad \n\t\t\t\t\tng-repeat="habilidad in habilidades"\n\t\t\t\t\ttitle="{{habilidad.title}}"\n\t\t\t\t\tskills="habilidad.skills">\n\t\t\t\t</habilidad>\n\n\t\t \t</div>}\n\n\t \t</div>\n\t\t'
+	};
+}
+
+module.exports = {
+	name: 'cvLenguajes',
+	func: cvLenguajes
+};
+
+},{}],11:[function(require,module,exports){
+"use strict";
+
+function cvMain() {
+
+	return {
+
+		link: function link() {
+			var slider = $("#slider3");
+			var responsiveSlidesConfig = {
+				auto: true,
+				pager: true,
+				nav: false,
+				speed: 50,
+				namespace: "callbacks",
+				before: function before() {
+					$('.events').append("<li>before event fired.</li>");
+				},
+				after: function after() {
+					$('.events').append("<li>after event fired.</li>");
+				}
+			};
+
+			slider.responsiveSlides(responsiveSlidesConfig);
+		},
+
+		template: "\n\t\t<style>\n\t\t\t\n\t\t\t.slider-info {\n\t\t\t\tmargin-top: 6px;\n\t\t\t\theight: 60px;\n\t\t\t}\n\n\t\t\t.slider-info p, .banner h3, .banner h2 {\n\t\t\t\tletter-spacing: 3px;\n\t\t\t}\n\n\t\t\t.slider-info p {\n\t\t\t\tmargin: 3px 0px;\n\t\t\t\tfont-size: 12px;\n\t\t\t}\n\n\t\t\t.banner h3 {\n\t\t\t\tfont-size: 35px;\n\t\t\t\tcolor: #fb9902;\n\t\t\t\ttext-shadow: 1px 1px black;\n\t\t\t}\n\n\t\t\t.banner h2 {\n\t\t\t\tcolor: #525252;\n\t\t\t  \ttext-shadow: 2px 2px black;\n\t\t\t}\n\n\t\t\t.banner img {\n\t\t\t\tborder: 1px solid #fb9902;\n\t\t\t}\n\n\t\t\t.callbacks_tabs {\n\t\t\t\ttop: 90px;\n\t\t\t}\n\n\t\t</style>\n\t\t<div class=\"main\" id=\"home\">\n\t\t\t<div class=\"banner\">\n\t\t\t\t<img src=\"dist/images/pic2.jpg\" alt=\" \" class=\"img-responsive\">\n\t\t\t\t<h2>Nazareth Pacheco</h2>\n\t\t\t\t<h3>Programador / WEB DEVELOPER</h3>\n\t\t\t\t<div class=\"callbacks_container\">\n\t\t\t\t\t<ul class=\"rslides\" id=\"slider3\">\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t<div class=\"slider-info\">\n\t\t\t\t\t\t  \t\t<p>Soluciono problemas del mundo real,</p>\n\t\t\t\t\t\t  \t\t<p>bajo el paradigma orientaci\xF3n a objetos.</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t<div class=\"slider-info\">\n\t\t\t\t\t\t\t   <p>Preocupado por crear soluciones basadas en,</p> \n\t\t\t\t\t\t\t   <p>c\xF3digo de calidad practicante SCRUM y</p>\n\t\t\t\t\t\t\t   <p>eXtreme programming.</p>\n\t\t\t\t\t\t    </div>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t<div class=\"slider-info\">\n\t\t\t\t\t\t\t\t<p>Maker, Aficionado a la rob\xF3tica.</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t</ul>\n\t\t\t\t\t<div class=\"clearfix\"></div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t"
+
+	};
+}
+
+module.exports = {
+	name: 'cvMain',
+	func: cvMain
+};
+
+},{}],12:[function(require,module,exports){
+'use strict';
+
+function cvNavigation() {
+
+	return {
+		link: function link() {},
+
+		template: '\n\t\t<style>\n\t\t\t.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {\n\t\t\t\tcolor: #fb9902 !important;\n\t\t\t}\n\t\t</style>\n\t\t<div class="w3_navigation">\n\n\t\t\t<div class="container">\n\n\t\t\t\t<nav class="navbar navbar-default">\n\n\t\t\t\t\t<div class="navbar-header">\n\n\t\t\t\t\t  <button \n\t\t\t\t\t  \ttype="button" \n\t\t\t\t\t  \tclass="navbar-toggle collapsed" \n\t\t\t\t\t  \tdata-toggle="collapse" \n\t\t\t\t\t  \tdata-target="#bs-example-navbar-collapse-1">\n\n\t\t\t\t\t\t\t<span class="sr-only">Toggle navigation</span>\n\t\t\t\t\t\t\t<span class="icon-bar"></span>\n\t\t\t\t\t\t\t<span class="icon-bar"></span>\n\t\t\t\t\t\t\t<span class="icon-bar"></span>\n\n\t\t\t\t\t  </button>\n\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">\n\t\t\t\t\t\t<nav class="cl-effect-1" id="cl-effect-1">\n\t\t\t\t\t\t\t<ul class="nav navbar-nav">\n\t\t\t\t\t\t\t\t<link-scroll \n\t\t\t\t\t\t\t\t\thref="{{\'about\'}}" \n\t\t\t\t\t\t\t\t\ttext="{{\'Sobre Mi\'}}">\n\t\t\t\t\t\t\t\t</link-scroll>\n\n\t\t\t\t\t\t\t\t<link-scroll \n\t\t\t\t\t\t\t\t\thref="{{\'services\'}}" \n\t\t\t\t\t\t\t\t\ttext="{{\'Que Puedo Aportar\'}}">\n\t\t\t\t\t\t\t\t</link-scroll>\n\n\t\t\t\t\t\t\t\t<link-scroll \n\t\t\t\t\t\t\t\t\thref="{{\'experiencia\'}}" \n\t\t\t\t\t\t\t\t\ttext="{{\'Experiencia\'}}">\n\t\t\t\t\t\t\t\t</link-scroll>\n\n\t\t\t\t\t\t\t\t<link-scroll \n\t\t\t\t\t\t\t\t\thref="{{\'habilidades\'}}" \n\t\t\t\t\t\t\t\t\ttext="{{\'Habilidades\'}}">\n\t\t\t\t\t\t\t\t</link-scroll>\n\n\t\t\t\t\t\t\t\t<link-scroll \n\t\t\t\t\t\t\t\t\thref="{{\'contacto\'}}" \n\t\t\t\t\t\t\t\t\ttext="{{\'Contacto\'}}">\n\t\t\t\t\t\t\t\t</link-scroll>\n\t\t\t\t\t\t\t</ul>\n\n\t\t\t\t\t\t</nav>\n\t\t\t\t\t\t\n\t\t\t\t\t</div>\n\n\t\t\t\t</nav>\n\n\t\t\t</div>\n\n\t\t</div>\n\t\t'
+
+	};
+}
+
+module.exports = {
+	name: 'cvNavigation',
+	func: cvNavigation
+};
+
+},{}],13:[function(require,module,exports){
+"use strict";
+
+function cvService() {
+	return {
+
+		link: function link($scope) {
+
+			$scope.title = "Lo que puedo Aportar.";
+			$scope.subtitle = "Comenzemos.";
+			$scope.sections = {
+
+				porQueContratarme: [['La deuda técnica es algo que suele pagarse muy caro. El Mayor aporte', 'qué puedo ofrecerle a un equipo es la reducción de la deuda técnica', 'aportando soluciones software fáciles de Mantener, Reutilizar y Escalar.'].join(' ')],
+
+				workflow: [['Nunca reinventó la rueda.', 'Sigo fielmente las metodologías; SCRUM y eXtreme Programing', 'combinado éstas con ATDD.'].join(' '), ['Redacto historias de usuario y criterios de aceptación.', 'usando Gerkin languaje.'].join(' '), ['Implementó eXtreme programing:', 'TDD y todo lo que envuelve el concepto de código fácil de testear;', 'SOLID, GRASP, Funciones de orden superior, Patrones de diseño,', 'Arquitectura hexagonal, Refactoring.'].join(' ')],
+
+				objetivos: [['Lograr un impacto en el paradigma que actualmente el sector tic', 'tiene sobre el software,  generando soluciones reales para personas reales,', 'implementando las mejores metodologías.'].join(' ')]
+
+			};
+
+			$scope.resumen = {
+
+				porQueContratarme: $scope.sections.porQueContratarme.join(' '),
+				workflow: $scope.sections.workflow.join(' '),
+				objetivos: $scope.sections.objetivos.join(' ')
+
+			};
+		},
+
+		template: "\n\t\t<style>\n\t\t\th3.w3l_head.two {\n\t\t\t\tcolor: #fb9902;\n\t\t\t}\n\n\t\t\t#services p.w3ls_head_para {\n\t\t\t\tcolor: white;\n\t\t\t\ttext-shadow: 1px 1px black;\n\t\t\t}\n\n\t\t\t.list-gds h4 {\n\t\t\t\tcolor: #fb9902;\n\t\t\t}\n\t\t</style>\n\t\t<div class=\"service\" id=\"services\">\n\t    \t<div class=\"container\">\n\t\t \t\t<h3 class=\"w3l_head two\">{{title}}</h3>\n\t\t\t\t<p class=\"w3ls_head_para\">{{subtitle}}</p>\n\t    \t\t<div class=\"service-agileits\">\n\t\t\t\t\t<div class=\"col-md-4 list-gds text-center\">\n\t\t\t\t\t\t<i class=\"fa fa-cog\" aria-hidden=\"true\"></i>\n\t\t\t\t\t\t<h4>Por que contrarme</h4>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<cut-parrafo\n\t\t\t\t\t\t\t\ttitulo=\"{{'Por que contrarme'}}\"\n\t\t\t\t\t\t\t\tparrafo=\"sections.porQueContratarme\"\n\t\t\t\t\t\t\t\tresumen=\"resumen.porQueContratarme\" \n\t\t\t\t\t\t\t\tlimite=\"300\">\t\n\t\t\t\t\t\t\t</cut-parrafo>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col-md-4 list-gds text-center\">\n\t\t\t\t\t\t<i class=\"fa fa-laptop\" aria-hidden=\"true\"></i>\n\t\t\t\t\t\t<h4>Workflow</h4>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<cut-parrafo\n\t\t\t\t\t\t\t\ttitulo=\"{{'Workflow'}}\"\n\t\t\t\t\t\t\t\tparrafo=\"sections.workflow\"\n\t\t\t\t\t\t\t\tresumen=\"resumen.workflow\" \n\t\t\t\t\t\t\t\tlimite=\"220\">\t\n\t\t\t\t\t\t\t</cut-parrafo>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col-md-4 list-gds text-center\">\n\t\t\t\t\t\t<i class=\"fa fa-thumbs-o-up\" aria-hidden=\"true\"></i>\n\t\t\t\t\t\t<h4>Objetivos</h4>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<cut-parrafo\n\t\t\t\t\t\t\t\ttitulo=\"{{'Objetivos'}}\"\n\t\t\t\t\t\t\t\tparrafo=\"sections.objetivos\"\n\t\t\t\t\t\t\t\tresumen=\"resumen.objetivos\" \n\t\t\t\t\t\t\t\tlimite=\"300\">\t\n\t\t\t\t\t\t\t</cut-parrafo>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t</div>\t\t\n\t\t \t\t</div>\n\t  \t\t</div>\n\t \t</div>\n\t\t"
+
+	};
+}
+
+module.exports = {
+	name: 'cvService',
+	func: cvService
+};
+
+},{}],14:[function(require,module,exports){
+'use strict';
+
 function cutParrafo() {
 	return {
 		scope: {
@@ -42025,7 +42272,7 @@ function cutParrafo() {
 				function cancel() {}
 			}
 		},
-		template: '\n\n\t\t<p>\n\t\t\t<span>\n\t\t\t\t{{ resumen | limitTo: limite }}\n\t\t\t</span>\n\t\t\t<button \n\t\t\t\tng-click="mostrarParrafoCompleto()"\n\t\t\t\tng-if="resumen.length > limite"\n\t\t\t\ttype="button" \n\t\t\t\tclass="btn btn-link glyphicon glyphicon-option-horizontal">\t\n\t\t\t</button>\n\t\t</p>\n\n\n\t\t<script type="text/ng-template" id="myModalContent.html">\n\t\t\t<style>\n\t\t\t\t\n\t\t\t\t.modal-content {\n\t\t\t\t\tborder-radius: 0px;\n\t\t\t\t\tbackground: rgba(6, 70, 97, 0.95);\n\t\t\t\t\tcolor: white;\n\t\t\t\t}\n\n\t\t\t\t.modal-body {\n\t\t\t\t\tpadding: 0px 40px 40px 40px;\n\n\t\t\t\t}\n\n\t\t\t\t.modal-title {\n\t\t\t\t\ttext-align: center;\n\t\t\t\t}\n\n\t\t\t\t.parrafo {\n\t\t\t\t\tmargin-top: 20px;\n\t\t\t\t}\n\n\t\t\t</style>\n\t        <div class="modal-header">\n\t            <h3 class="modal-title" id="modal-title">{{titulo}}</h3>\n\t        </div>\n\t        <div class="modal-body" id="modal-body">\n\t           <p class="parrafo" ng-repeat="parrafo in parrafos">\n\t           \t\t{{ parrafo}}\n\t           </p>\n\t        </div>\n\t    </script>\n\n\n\n\t\t'
+		template: '\n\n\t\t<p>\n\t\t\t<span>\n\t\t\t\t{{ resumen | limitTo: limite }}\n\t\t\t</span>\n\t\t\t<button \n\t\t\t\tng-click="mostrarParrafoCompleto()"\n\t\t\t\tng-if="resumen.length > limite"\n\t\t\t\ttype="button" \n\t\t\t\tclass="btn btn-link glyphicon glyphicon-option-horizontal">\t\n\t\t\t</button>\n\t\t</p>\n\n\n\t\t<script type="text/ng-template" id="myModalContent.html">\n\t\t\t<style>\n\t\t\t\t\n\t\t\t\t.modal-content {\n\t\t\t\t\tborder-radius: 0px;\n\t\t\t\t\tbackground: rgba(6, 70, 97, 0.95);\n\t\t\t\t\tcolor: white;\n\t\t\t\t\ttext-shadow: 1px 1px black;\n\t\t\t\t}\n\n\t\t\t\t.modal-body {\n\t\t\t\t\tpadding: 0px 40px 40px 40px;\n\t\t\t\t}\n\n\t\t\t\t.modal-title {\n\t\t\t\t\ttext-align: center;\n\t\t\t\t\tcolor: #fb9902;\n\t\t\t\t}\n\n\t\t\t\t.parrafo {\n\t\t\t\t\tmargin-top: 20px;\n\t\t\t\t}\n\n\t\t\t</style>\n\t        <div class="modal-header">\n\t            <h3 class="modal-title" id="modal-title">{{titulo}}</h3>\n\t        </div>\n\t        <div class="modal-body" id="modal-body">\n\t           <p class="parrafo" ng-repeat="parrafo in parrafos">\n\t           \t\t{{ parrafo}}\n\t           </p>\n\t        </div>\n\t    </script>\n\n\n\n\t\t'
 	};
 }
 
@@ -42034,177 +42281,68 @@ module.exports = {
 	func: cutParrafo
 };
 
-},{}],7:[function(require,module,exports){
-'use strict';
-
-function cvAbout() {
-	return {
-		link: function link() {},
-
-		template: '\n\t\t<div class="about" id="about">\n\t\t\t<div class="container">\n\t\t\t\t<h3 class="w3l_head">Sobre Mi</h3>\n\t\t\t\t<p class="w3ls_head_para">Informacion Personal.</p>\n\t\t\t\t<div class="w3l-grids-about">\n\t\t\t\t\t<div class="col-md-5 w3ls-ab-right">\n\t\t\t\t\t\t<div class="agile-about-right-img">\n\t\t\t\t\t\t\t<img src="dist/images/ab.jpg" alt="">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="col-md-7 w3ls-agile-left">\n\t\t\t\t\t\t<div class="w3ls-agile-left-info">\n\t\t\t\t\t\t\t<h4>Nombre</h4>\n\t\t\t\t\t\t\t<p>Nazareth Pacheco</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="w3ls-agile-left-info">\n\t\t\t\t\t\t\t<h4>Sexo</h4>\n\t\t\t\t\t\t\t<p>Masculino</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="w3ls-agile-left-info">\n\t\t\t\t\t\t\t<h4>Direccion</h4>\n\t\t\t\t\t\t\t<p>Caracas</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="w3ls-agile-left-info">\n\t\t\t\t\t\t\t<h4>Email</h4>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<a href="mailto:nazarethj.pacheco@gmail.com">\n\t\t\t\t\t\t\t\t\tnazarethj.pacheco@gmail.com\n\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="w3ls-agile-left-info">\n\t\t\t\t\t\t\t<h4>Hobbies</h4>\n\t\t\t\t\t\t\t<p>Cocinar, Baloncesto, Robotica, Comics, Cine, Open Ecology.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="clearfix"> </div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t'
-	};
-}
-
-module.exports = {
-	name: 'cvAbout',
-	func: cvAbout
-};
-
-},{}],8:[function(require,module,exports){
-'use strict';
-
-function cvAptitudes() {
-	return {
-		link: function link($scope) {},
-		template: '\n\t\t<div class="education" id="education two">\n\t    \t<cv-experiencia></cv-experiencia>\n\n\t\t\t<div class="education" id="education">\n\n\t\t\t\t<cv-lenguajes></cv-lenguajes>\n\n\t\t\t\t<cv-herramientas></cv-herramientas>\n\n\t\t\t</div>\n\n\t \t\t<div class="clearfix"> </div>\n\n\t\t</div>\n\t\t'
-	};
-}
-
-module.exports = {
-	name: 'cvAptitudes',
-	func: cvAptitudes
-};
-
-},{}],9:[function(require,module,exports){
-'use strict';
-
-function cvExperiencia() {
-	return {
-		link: function link($scope) {},
-		template: '\n\t\t<style>\n\t\t\t.divider {\n\t\t\t\tborder-top: 1px solid #ddd;\n\t\t\t}\n\t\t</style>\n\t\t<div class="col-md-12 education-w3l">\n\t\t\t<h3 class="w3l_head three">Experiencia</h3>\n\t\t\t<div class="education-agile-grids">\n\n\t\t\t\t<div class="education-agile-w3l">\n\t\t\t\t\t<div class="education-agile-w3l-year">\n\t\t\t       \t\t<h4>Mayo 2016 - Enero 2017</h4>\n\t\t\t       \t\t<h6>MEDINET</h6>\n\t\t\t     \t</div>\n\t\t\t\t \t<div class="education-agile-w3l-info">\n\t\t\t     \t\t<h4>Fullstack-web developer team leader, scrum master padawan.</h4>\n\t\t\t\t\t   \t<p>\n\t\t\t\t\t   \t\t<p>\n\t\t\t\t\t\t   \t\t<p>\n\t\t\t\t\t\t   \t\t\tDesarrollo de aplicaci\xF3n Business Inteligence que mostraba el \n\t\t\t\t\t\t   \t\t\ttiempo laboral: efectivo, perdido, sobretiempo;\n\t\t\t\t\t\t   \t\t\tde un empleado administrativo x en un rango tiempo x;\n\t\t\t\t\t\t   \t\t\tacomplandome a un lector de tarjetas(Entrada/Salida). \t\t\n\t\t\t\t\t\t   \t\t</p>\n\t\t\t\t\t\t   \t\t<herramienta-helper \n\t\t\t\t\t\t   \t\t\therramientas="{{\'ASP.net MVC, C#, Angular js Como Capa de presentaci\xF3n.\'}}">\n\t\t\t\t\t\t   \t\t</herramienta-helper>\n\t\t\t\t\t\t   \t</p>\n\t\t\t\t\t   \t\t<p class="divider"></p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t   \t\t<p>\n\t\t\t\t\t\t   \t\t\tDesarrollo de un CMS Ecommerce con la integraci\xF3n de una \n\t\t\t\t\t\t   \t\t\tpasarela de pago (123Pago). El negocio consist\xEDa en venta de \n\t\t\t\t\t\t   \t\t\tboletos, control del inventario de: boletos vendidos, \n\t\t\t\t\t\t   \t\t\tdisponibles, ofertados; validaci\xF3n del boleto a trav\xE9s de un \n\t\t\t\t\t\t   \t\t\tc\xF3digo seguridad generado por la aplicaci\xF3n.\n\t\t\t\t\t\t   \t\t</p>\n\t\t\t\t\t\t   \t\t<p>\n\t\t\t\t\t\t   \t\t\tProyecto legacy, donde aterrice y puse a prueba de \n\t\t\t\t\t\t   \t\t\tmanera satisfactoria conceptos de refactoring.\n\t\t\t\t\t\t   \t\t</p>\n\t\t\t\t\t\t   \t\t<herramienta-helper \n\t\t\t\t\t\t   \t\t\therramientas="{{\'Java, Javascript, Spring Framework, Angular Js como capa de presentaci\xF3n.\'}}">\n\t\t\t\t\t\t   \t\t</herramienta-helper>\n\t\t\t\t\t\t   \t</p> \n\t\t\t\t\t   \t</p>\n\t\t\t     \t</div>\n\t\t      \t\t<div class="clearfix"></div>\n\t\t\t  \t</div>\n\n\t\t\t  \t<div class="education-agile-w3l two">\n\t\t\t\t\t<div class="education-agile-w3l-year">\n\t\t\t\t       \t<h4>Mayo 2016 - Enero 2017</h4>\n\t\t\t\t       \t<h6>Soluciones AST</h6>\n\t\t\t     \t</div>\n\t\t\t\t \t<div class="education-agile-w3l-info">\n\t\t\t       \t\t<h4>Fullstack-web developer team leader, scrum master padawan.</h4>\n\t\t\t\t\t   \t<p>\n\t\t\t\t\t   \t\t<p>\n\t\t\t\t\t   \t\t\tDesarrollo de una aplicaci\xF3n de venta de boletos sobre \n\t\t\t\t\t   \t\t\teventos, para cliente en argentina. El negocio era bastante \n\t\t\t\t\t   \t\t\tsimilar al mencionado en la experiencia anterior, \n\t\t\t\t\t   \t\t\tcon la particularidad que la validaci\xF3n del boleto \n\t\t\t\t\t   \t\t\tera a trav\xE9s de un app Mobile que desarrolle con Ionic esta \n\t\t\t\t\t   \t\t\tescaneaba un c\xF3digo Qr asociado a una entrada y Validadaba la entradada.\n\t\t\t\t\t   \t\t\tAdicionalmente inclu\xEDa una Session Bussiness Inteligence que mostraba \n\t\t\t\t\t   \t\t\tinformaci\xF3n relacionada a:\n\t\t\t\t\t   \t\t\t\tboletos vendidos, \n\t\t\t\t\t  \t\t\t\tboletos ofertados y boletos disponibles.\n\t\t\t\t\t  \t\t\t\tReportes de asistencia para un evento.\n\n\t\t\t\t\t   \t\t</p>\n\t\t\t\t\t   \t\t<herramienta-helper \n\t\t\t\t\t   \t\t\therramientas="{{\'Javascript, Laravel 5,Angular Js como capa de presentaci\xF3n.\'}}">\n\t\t\t\t\t   \t\t</herramienta-helper>\n\t\t\t\t\t   \t</p> \n\t\t\t\t    </div>\n\t\t\t      \t<div class="clearfix"></div>\n\t\t\t  \t</div>\n\t\t\t  \t<div class="education-agile-w3l">\n\n\t\t     \t\t<div class="education-agile-w3l-year">\n\t\t\t       \t\t<h4>2013-2016</h4>\n\t\t\t\t\t   \t<h6>Freelance</h6>\n\t\t\t     \t</div>\n\n\t\t\t\t \t<div class="education-agile-w3l-info">\n\t\t\t\t       \t<h4>Fullstack web developer</h4>\n\t\t\t\t\t   \t<p>\n\t\t\t\t\t   \t\t<p>\n\t\t\t\t\t\t   \t\t<p>\n\t\t\t\t\t\t   \t\t\tDesarrollo de un ecommerce para venta y alquiler de \n\t\t\t\t\t\t   \t\t\tequipos para ferreteria y construccion\n\t\t\t\t\t\t   \t\t</p>\n\t\t\t\t\t\t   \t\t<herramienta-helper \n\t\t\t\t\t\t   \t\t\therramientas="{{\'PHP, Javascript, Cake, Jquery.\'}}">\n\t\t\t\t\t\t   \t\t</herramienta-helper>\n\t\t\t\t\t   \t\t</p>\n\t\t\t\t   \t\t\t<p class="divider"></p>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t   \t\t<p>\n\t\t\t\t\t\t   \t\t\tDesarrollo de help desk para la gesti\xF3n de incidencias \n\t\t\t\t\t\t   \t\t\tdirigidas a un departamento de soporte t\xE9cnico, asignaci\xF3n de \n\t\t\t\t\t\t   \t\t\ttickets para analistas implementando algoritmo round robin\n\t\t\t\t\t\t   \t\t</p>\n\t\t\t\t\t\t   \t\t<herramienta-helper \n\t\t\t\t\t\t   \t\t\therramientas="{{\'PHP, Javascript, Codeigniter, JQuery UI.\'}}">\n\t\t\t\t\t\t   \t\t</herramienta-helper>\n\t\t\t\t\t   \t\t</p>\n\t\t\t\t   \t\t\t<p class="divider"></p>\n\t\t\t\t\t   \t\t<p>\n\t\t\t\t\t\t   \t\t<p>\n\t\t\t\t\t\t   \t\t\tDesarrollo de una aplicaci\xF3n de mensajer\xEDa interna, \n\t\t\t\t\t\t   \t\t\tgestor de memor\xE1ndums y micronotas\n\t\t\t\t\t\t   \t\t</p>\n\t\t\t\t\t\t   \t\t<herramienta-helper \n\t\t\t\t\t\t   \t\t\therramientas="{{\'PHP, Javascript, Codeigniter, JQuery UI.\'}}">\n\t\t\t\t\t\t   \t\t</herramienta-helper>\n\t\t\t\t\t   \t\t</p>\n\t\t\t\t   \t\t\t<p class="divider"></p>\n\t\t\t\t\t   \t\t<p>\n\t\t\t\t\t\t   \t\t<p>\n\t\t\t\t\t\t   \t\t\tDesarrollo de una aplicaci\xF3n para la gesti\xF3n de pr\xE9stamos, y \n\t\t\t\t\t\t   \t\t\tsolicitud de libros para una biblioteca.\n\t\t\t\t\t\t   \t\t</p>\n\t\t\t\t\t\t   \t\t<herramienta-helper \n\t\t\t\t\t\t   \t\t\therramientas="{{\'PHP, Javascript, Codeigniter, JQuery UI.\'}}">\n\t\t\t\t\t\t   \t\t</herramienta-helper>\n\t\t\t\t\t   \t\t</p>\n\t\t\t\t\t   \t</p>\n\t\t\t     \t</div>\n\t\t\t      \t<div class="clearfix"></div>\n\t\t\t\t  </div>\n\t\t\t  </div>\n\t\t</div>\n\t\t'
-	};
-}
-
-module.exports = {
-	name: 'cvExperiencia',
-	func: cvExperiencia
-};
-
-},{}],10:[function(require,module,exports){
-'use strict';
-
-function cvHerramientas() {
-	return {
-		link: function link() {},
-		template: '\n\t\t<div class="col-md-6 education-w3l">\n\t     \t<h3 class="w3l_head three">Herramientas</h3>\n\t\t  \t<div class="education-agile-grids">\n\t\t\t\t<div class="education-agile-w3l">\n\t\t     \t\t<div class="education-agile-w3l-year">\n\t\t       \t\t\t<h4>PHP</h4>\n\t\t\t     \t</div>\n\t\t\t\t \t<div class="education-agile-w3l-info">\n\t\t\t       \t\t<h4>\n\t\t\t       \t\t\tSymfony, Laravel, Lumen, Codeigniter, Cake, \n\t\t\t       \t\t\tDoctrine, Composer.\n\t\t       \t\t\t</h4>\n\t\t\t     \t</div>\n\t\t\t  \t</div>\n\t\t\t  \t<p style="height: 100px"></p>\n\t\t\t  \t<div class="education-agile-w3l">\n\t\t     \t\t<div class="education-agile-w3l-year">\n\t\t       \t\t\t<h4>Javascript</h4>\n\t\t\t     \t</div>\n\t\t\t\t \t<div class="education-agile-w3l-info">\n\t\t\t       \t\t<h4>\n\t\t\t       \t\t\tAngular, Angular Bootstrap, Gulp, Browserify,\n\t\t\t       \t\t\tBower, JQuery, JQuery UI.\n\t\t\t       \t\t</h4>\n\t\t\t     \t</div>\n\t\t\t  \t</div>\n\t\t\t  \t<p style="height: 100px"></p>\n\t\t\t  \t<div class="education-agile-w3l">\n\t\t     \t\t<div class="education-agile-w3l-year">\n\t\t       \t\t\t<h4>Java</h4>\n\t\t\t     \t</div>\n\t\t\t\t \t<div class="education-agile-w3l-info">\n\t\t\t       \t\t<h4>\n\t\t\t       \t\t\tJPA, Servlets, JSP.\n\t\t\t       \t\t</h4>\n\t\t\t     \t</div>\n\t\t\t  \t</div>\n\t\t\t  \t<p style="height: 100px"></p>\n\t\t\t  \t<div class="education-agile-w3l">\n\t\t     \t\t<div class="education-agile-w3l-year">\n\t\t       \t\t\t<h4>C#</h4>\n\t\t\t     \t</div>\n\t\t\t\t \t<div class="education-agile-w3l-info">\n\t\t\t       \t\t<h4>\n\t\t\t       \t\t\tAsp.net MVC 5, Entitie Framework, LINQ.\n\t\t\t       \t\t</h4>\n\t\t\t     \t</div>\n\t\t\t      \t<p style="height: 50px;"></p>\n\t\t\t  \t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t'
-	};
-}
-
-module.exports = {
-	name: 'cvHerramientas',
-	func: cvHerramientas
-};
-
-},{}],11:[function(require,module,exports){
-'use strict';
-
-function cvLenguajes() {
-
-	return {
-		link: function link() {},
-		template: '\n\t\t<div class="col-md-6 skills">\n\t\t\t<h3 class="w3l_head two">Lenguajes</h3>\n\t     \t<div class="skill-agile">\n\t\t\t\t<div class=\'bar_group\'>\n\t\t\t\t\t<div class=\'bar_group__bar thin elastic\' label=\'HTML\' value=\'70\'></div>\n\t\t\t\t\t<div class=\'bar_group__bar thin elastic\' label=\'CSS3\' value=\'60\'></div>\n\t\t\t\t\t<div \n\t\t\t\t\t\tclass=\'bar_group__bar thin elastic\' \n\t\t\t\t\t\tlabel=\'PHP/Javascript\' \n\t\t\t\t\t\tvalue=\'100\'>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\'bar_group__bar thin elastic\' label=\'Java\' value=\'70\'></div>\n\t\t\t\t\t<div class=\'bar_group__bar thin elastic\' label=\'C#\' value=\'80\'></div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t </div>\n\t\t'
-	};
-}
-
-module.exports = {
-	name: 'cvLenguajes',
-	func: cvLenguajes
-};
-
-},{}],12:[function(require,module,exports){
-"use strict";
-
-function cvMain() {
-
-	return {
-
-		link: function link() {
-			var slider = $("#slider3");
-			var responsiveSlidesConfig = {
-				auto: true,
-				pager: true,
-				nav: false,
-				speed: 500,
-				namespace: "callbacks",
-				before: function before() {
-					$('.events').append("<li>before event fired.</li>");
-				},
-				after: function after() {
-					$('.events').append("<li>after event fired.</li>");
-				}
-			};
-
-			slider.responsiveSlides(responsiveSlidesConfig);
-		},
-
-		template: "\n\t\t<div class=\"main\" id=\"home\">\n\t\t\t<div class=\"banner\">\n\t\t\t\t<img src=\"dist/images/pic2.jpg\" alt=\" \" class=\"img-responsive\">\n\t\t\t\t<h2>Nazareth Pacheco</h2>\n\t\t\t\t<span>Programador / WEB DEVELOPER</span>\n\t\t\t\t<div class=\"callbacks_container\">\n\t\t\t\t\t<ul class=\"rslides\" id=\"slider3\">\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t<div class=\"slider-info\">\n\t\t\t\t\t\t  \t\t<p>Soluciono problemas del mundo real, bajo el paradigma orientaci\xF3n a objetos.</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t<div class=\"slider-info\">\n\t\t\t\t\t\t\t   <p>Preocupado por crear soluciones basadas en c\xF3digo de calidad, practicante SCRUM y eXtreme programming.</p>\n\t\t\t\t\t\t    </div>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t<div class=\"slider-info\">\n\t\t\t\t\t\t\t\t<p>Maker, Aficionado a la rob\xF3tica.</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t</ul>\n\t\t\t\t\t<div class=\"clearfix\"></div>\n\t\t\t\t</div>\n\t\t\t\n\t\t\t\t<ul class=\"top-links\">\n\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-facebook\"></i></a></li>\n\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-twitter\"></i></a></li>\n\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-linkedin\"></i></a></li>\n\t\t\t\t\t<li><a href=\"#\"><i class=\"fa fa-google-plus\"></i></a></li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\n\t\t"
-
-	};
-}
-
-module.exports = {
-	name: 'cvMain',
-	func: cvMain
-};
-
-},{}],13:[function(require,module,exports){
-'use strict';
-
-function cvNavigation() {
-
-	return {
-		link: function link() {},
-
-		template: '\n\t\t<div class="w3_navigation">\n\n\t\t\t<div class="container">\n\n\t\t\t\t<nav class="navbar navbar-default">\n\n\t\t\t\t\t<div class="navbar-header">\n\n\t\t\t\t\t  <button \n\t\t\t\t\t  \ttype="button" \n\t\t\t\t\t  \tclass="navbar-toggle collapsed" \n\t\t\t\t\t  \tdata-toggle="collapse" \n\t\t\t\t\t  \tdata-target="#bs-example-navbar-collapse-1">\n\n\t\t\t\t\t\t\t<span class="sr-only">Toggle navigation</span>\n\t\t\t\t\t\t\t<span class="icon-bar"></span>\n\t\t\t\t\t\t\t<span class="icon-bar"></span>\n\t\t\t\t\t\t\t<span class="icon-bar"></span>\n\n\t\t\t\t\t  </button>\n\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">\n\t\t\t\t\t\t<nav class="cl-effect-1" id="cl-effect-1">\n\t\t\t\t\t\t\t<ul class="nav navbar-nav">\n\t\t\t\t\t\t\t\t<link-scroll \n\t\t\t\t\t\t\t\t\thref="{{\'about\'}}" \n\t\t\t\t\t\t\t\t\ttext="{{\'Sobre Mi\'}}">\n\t\t\t\t\t\t\t\t</link-scroll>\n\n\t\t\t\t\t\t\t\t<link-scroll \n\t\t\t\t\t\t\t\t\thref="{{\'services\'}}" \n\t\t\t\t\t\t\t\t\ttext="{{\'Que Puedo Aportar\'}}">\n\t\t\t\t\t\t\t\t</link-scroll>\n\n\t\t\t\t\t\t\t\t<link-scroll \n\t\t\t\t\t\t\t\t\thref="{{\'education\'}}" \n\t\t\t\t\t\t\t\t\ttext="{{\'Lenguajes\'}}">\n\t\t\t\t\t\t\t\t</link-scroll>\n\n\t\t\t\t\t\t\t\t<link-scroll \n\t\t\t\t\t\t\t\t\thref="{{\'gallery\'}}" \n\t\t\t\t\t\t\t\t\ttext="{{\'Herramientas\'}}">\n\t\t\t\t\t\t\t\t</link-scroll>\n\n\t\t\t\t\t\t\t\t<link-scroll \n\t\t\t\t\t\t\t\t\thref="{{\'mail\'}}" \n\t\t\t\t\t\t\t\t\ttext="{{\'Experiencia\'}}">\n\t\t\t\t\t\t\t\t</link-scroll>\n\t\t\t\t\t\t\t</ul>\n\n\t\t\t\t\t\t</nav>\n\t\t\t\t\t\t\n\t\t\t\t\t</div>\n\n\t\t\t\t</nav>\n\n\t\t\t</div>\n\n\t\t</div>\n\t\t'
-
-	};
-}
-
-module.exports = {
-	name: 'cvNavigation',
-	func: cvNavigation
-};
-
-},{}],14:[function(require,module,exports){
-"use strict";
-
-function cvService() {
-	return {
-
-		link: function link($scope) {
-
-			$scope.title = "Lo que puedo Aportar.";
-			$scope.subtitle = "Comenzemos.";
-			$scope.sections = {
-
-				porQueContratarme: [['La deuda técnica es algo que suele pagarse muy caro. El Mayor aporte', 'qué puedo ofrecerle a un equipo es la reducción de la deuda técnica', 'aportando soluciones software fáciles de Mantener, Reutilizar y Escalar.'].join(' ')],
-
-				workflow: [['Nunca reinventó la rueda.', 'Sigo fielmente las metodologías; SCRUM y eXtreme Programing', 'combinado éstas con ATDD.'].join(' '), ['Redacto historias de usuario y criterios de aceptación.', 'usando Gerkin languaje.'].join(' '), ['Implementó eXtreme programing:', 'TDD y todo lo que envuelve el concepto de código fácil de testear;', 'SOLID, GRASP, Funciones de orden superior, Patrones de diseño,', 'Arquitectura hexagonal, Refactoring.'].join(' ')],
-
-				objetivos: [['Lograr un impacto en el paradigma que actualmente el sector tic', 'tiene sobre el software,  generando soluciones reales para personas reales,', 'implementando las mejores metodologías.'].join(' ')]
-
-			};
-
-			$scope.resumen = {
-
-				porQueContratarme: $scope.sections.porQueContratarme.join(' '),
-				workflow: $scope.sections.workflow.join(' '),
-				objetivos: $scope.sections.objetivos.join(' ')
-
-			};
-		},
-
-		template: "\n\t\t<div class=\"service\" id=\"services\">\n\t    \t<div class=\"container\">\n\t\t \t\t<h3 class=\"w3l_head two\">{{title}}</h3>\n\t\t\t\t<p class=\"w3ls_head_para\">{{subtitle}}</p>\n\t    \t\t<div class=\"service-agileits\">\n\t\t\t\t\t<div class=\"col-md-4 list-gds text-center\">\n\t\t\t\t\t\t<i class=\"fa fa-cog\" aria-hidden=\"true\"></i>\n\t\t\t\t\t\t<h4>Por que contrarme</h4>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<cut-parrafo\n\t\t\t\t\t\t\t\ttitulo=\"{{'Por que contrarme'}}\"\n\t\t\t\t\t\t\t\tparrafo=\"sections.porQueContratarme\"\n\t\t\t\t\t\t\t\tresumen=\"resumen.porQueContratarme\" \n\t\t\t\t\t\t\t\tlimite=\"300\">\t\n\t\t\t\t\t\t\t</cut-parrafo>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col-md-4 list-gds text-center\">\n\t\t\t\t\t\t<i class=\"fa fa-laptop\" aria-hidden=\"true\"></i>\n\t\t\t\t\t\t<h4>Workflow</h4>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<cut-parrafo\n\t\t\t\t\t\t\t\ttitulo=\"{{'Workflow'}}\"\n\t\t\t\t\t\t\t\tparrafo=\"sections.workflow\"\n\t\t\t\t\t\t\t\tresumen=\"resumen.workflow\" \n\t\t\t\t\t\t\t\tlimite=\"220\">\t\n\t\t\t\t\t\t\t</cut-parrafo>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col-md-4 list-gds text-center\">\n\t\t\t\t\t\t<i class=\"fa fa-thumbs-o-up\" aria-hidden=\"true\"></i>\n\t\t\t\t\t\t<h4>Objetivos</h4>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<cut-parrafo\n\t\t\t\t\t\t\t\ttitulo=\"{{'Objetivos'}}\"\n\t\t\t\t\t\t\t\tparrafo=\"sections.objetivos\"\n\t\t\t\t\t\t\t\tresumen=\"resumen.objetivos\" \n\t\t\t\t\t\t\t\tlimite=\"300\">\t\n\t\t\t\t\t\t\t</cut-parrafo>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t</div>\t\t\n\t\t \t\t</div>\n\t  \t\t</div>\n\t \t</div>\n\t\t"
-
-	};
-}
-
-module.exports = {
-	name: 'cvService',
-	func: cvService
-};
-
 },{}],15:[function(require,module,exports){
+'use strict';
+
+function descripcionExperiencia() {
+	return {
+		scope: {
+			parrafos: '='
+		},
+		controller: function controller($scope) {},
+		template: '\n\t\t<p ng-repeat="parrafo in parrafos">\n\t\t\t{{parrafo}}\n\t\t</p>\n\t\t'
+	};
+}
+
+module.exports = {
+	name: 'descripcionExperiencia',
+	func: descripcionExperiencia
+};
+
+},{}],16:[function(require,module,exports){
+'use strict';
+
+function experienciaHelper() {
+
+	return {
+		scope: {
+			empresa: '@',
+			duracion: '@',
+			cargo: '@',
+			works: '='
+		},
+		controller: function controller($scope) {
+			$scope.show = false;
+		},
+		template: '\n\t\t<div class="education-agile-w3l">\n\t\t\t<div class="education-agile-w3l-year">\n\t       \t\t<h4>{{empresa}}</h4>\n\t       \t\t<h6>{{duracion}}</h6>\n\t     \t</div>\n\t\t \t<div class="education-agile-w3l-info">\n\t     \t\t<h4 class="education-agile-w3l-info__title">\n\t     \t\t\t{{cargo}}\n\t     \t\t\t<button \n\t     \t\t\t\ttype="button"\n\t     \t\t\t\tng-click="show = !show" \n\t     \t\t\t\tclass="btn btn-link glyphicon glyphicon-plus-sign pull-right">\n\t\t\t\t    </button>\n     \t\t\t</h4>\n\t\t\t   \t<div class="education-agile-w3l-info" ng-if="show">\n\t\t\t   \t\t<p ng-repeat="work in works">\n\t\t\t   \t\t\t<descripcion-experiencia \n\t\t\t   \t\t\t\tparrafos="work.descripcion">\n\t\t   \t\t\t\t</descripcion-experiencia>\n\t\t\t   \t\t\t<herramienta-helper \n\t\t\t\t   \t\t\therramientas="{{work.herramientas}}">\n\t\t\t\t   \t\t</herramienta-helper>\n\t\t\t   \t\t</p>\n\t\t\t   \t</div>\n\t     \t</div>\n      \t\t<div class="clearfix"></div>\n\t  \t</div>\n\t\t'
+	};
+}
+
+module.exports = {
+	name: 'experienciaHelper',
+	func: experienciaHelper
+};
+
+},{}],17:[function(require,module,exports){
+'use strict';
+
+function habilidad() {
+	return {
+		scope: {
+			title: '@',
+			skills: '='
+		},
+		controller: function controller($scope) {},
+		template: '\n\t\t<div class="col-xs-4">\n\t\t\t<div class="panel">\n\t\t\t \t<div class="panel-heading">\n\t\t\t \t\t<span class="panel-title pull-left">\n\t\t\t\t\t\t{{title}}\n\t\t            </span>\n\t\t\t \t\t<button class="btn btn-link pull-right" ng-click="show = !show">\n\t\t\t \t\t\t<span class="glyphicon glyphicon-plus"></span>\n\t\t\t \t\t</button>\n\t\t \t\t\t<div class="clearfix"></div>\n\t\t \t\t</div>\n\t\t  \t\t<ul class="list-group" ng-if="!show">\n\t\t\t\t\t<li class="list-group-item" \n\t\t\t\t\t\tng-repeat="skill in skills track by $index">\n\t\t\t\t  \t\t{{skill}}\n\t\t\t  \t\t</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\n\t\t'
+	};
+}
+
+module.exports = {
+	name: 'habilidad',
+	func: habilidad
+};
+
+},{}],18:[function(require,module,exports){
 'use strict';
 
 function herramientaHelper() {
@@ -42213,7 +42351,7 @@ function herramientaHelper() {
 			herramientas: '@'
 		},
 		controller: function controller($scope) {},
-		template: '\n\t\t<p>\n   \t\t\t<strong>\n\t\t\t\tHerramientas y lenguajes usados: \n\t\t\t</strong> \n\t\t\t<span>\n\t\t\t\t{{ herramientas }}\n\t\t\t</span>\n   \t\t</p>\n\t\t'
+		template: '\n\t\t<p style="border-bottom: 1px solid rgba(251, 153, 2, .4); padding-bottom: 10px">\n   \t\t\t<strong>\n\t\t\t\tHerramientas y lenguajes usados: \n\t\t\t</strong> \n\t\t\t<span>\n\t\t\t\t{{ herramientas }}\n\t\t\t</span>\n   \t\t</p>\n\t\t'
 	};
 }
 
@@ -42222,7 +42360,7 @@ module.exports = {
 	func: herramientaHelper
 };
 
-},{}],16:[function(require,module,exports){
+},{}],19:[function(require,module,exports){
 'use strict';
 
 function linkScroll() {
