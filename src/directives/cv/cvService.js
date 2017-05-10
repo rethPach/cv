@@ -10,9 +10,10 @@ function cvService() {
 				porQueContratarme : [
 
 					[
-						'La deuda técnica es algo que suele pagarse muy caro. El Mayor aporte',
-						'qué puedo ofrecerle a un equipo es la reducción de la deuda técnica',
-						'aportando soluciones software fáciles de Mantener, Reutilizar y Escalar.'
+						'La deuda técnica es algo que suele pagarse muy caro. El mayor aporte',
+						'qué puedo ofrecerle a un equipo, es la reducción de la deuda técnica',
+						'aportando soluciones software fáciles de: Mantener, Reutilizar y Escalar.'
+
 					].join(' '),
 
 				],
@@ -23,19 +24,22 @@ function cvService() {
 					[
 						'Nunca reinventó la rueda.', 
 						'Sigo fielmente las metodologías; SCRUM y eXtreme Programing', 
-						'combinado éstas con ATDD.'
+						'combinando éstas con ATDD.'
+
 					].join(' '),
 
 					[
-						'Redacto historias de usuario y criterios de aceptación.',
-						'usando Gerkin languaje.',
+						'Redacto historias de usuario y criterios de aceptación,',
+						'usando Gerkin languaje.'
+
 					].join(' '),
 
 					[
-						'Implementó eXtreme programing:',
-						'TDD y todo lo que envuelve el concepto de código fácil de testear;',
+						'Implementó eXtreme programing',
+						'TDD y todo lo que envuelve el concepto de código fácil de testear:',
 						'SOLID, GRASP, Funciones de orden superior, Patrones de diseño,',
 						'Arquitectura hexagonal, Refactoring.'
+
 					].join(' '),
 
 
@@ -44,7 +48,7 @@ function cvService() {
 				objetivos: [
 
 					[
-						'Lograr un impacto en el paradigma que actualmente el sector tic', 
+						'Lograr un impacto en el paradigma que actualmente el sector tecnologico', 
 						'tiene sobre el software,  generando soluciones reales para personas reales,', 
 						'implementando las mejores metodologías.'
 					].join(' '),
@@ -78,6 +82,9 @@ function cvService() {
 			.list-gds h4 {
 				color: #fb9902;
 			}
+			#services {
+				text-shadow: 1px 1px black;
+			}
 		</style>
 		<div class="service" id="services">
 	    	<div class="container">
@@ -86,7 +93,7 @@ function cvService() {
 	    		<div class="service-agileits">
 					<div class="col-md-4 list-gds text-center">
 						<i class="fa fa-cog" aria-hidden="true"></i>
-						<h4>Por que contrarme</h4>
+						<h4>¿Por que contrarme?</h4>
 						<p>
 							<cut-parrafo
 								titulo="{{'Por que contrarme'}}"

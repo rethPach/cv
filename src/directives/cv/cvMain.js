@@ -2,7 +2,7 @@ function cvMain() {
 
 	return {
 
-		link: function() {
+		link: function($scope) {
 			var slider = $("#slider3");
 			var responsiveSlidesConfig = {
 				auto: true,
@@ -50,25 +50,47 @@ function cvMain() {
 			}
 
 			.banner img {
-				border: 1px solid #fb9902;
+				border: 2px solid white;
 			}
 
 			.callbacks_tabs {
 				top: 90px;
 			}
 
+			.top-links {
+				margin-bottom: 65px;
+				padding-left: 25px
+			}
+
 		</style>
 		<div class="main" id="home">
 			<div class="banner">
-				<img src="dist/images/pic2.jpg" alt=" " class="img-responsive">
+				<ul class="top-links">
+					<li>
+						<a href="https://github.com/rethPach">
+							<i class="fa fa-fa fa-github"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/nazzarth">
+							<i class="fa fa-twitter"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.linkedin.com/in/nazareth-pacheco-3233a2141/">
+							<i class="fa fa-linkedin"></i>
+						</a>
+					</li>
+				</ul>
+				<img src="dist/images/fotoCv.jpg" alt=" " class="img-responsive">
 				<h2>Nazareth Pacheco</h2>
-				<h3>Programador / WEB DEVELOPER</h3>
+				<h3>Modelador / WEB DEVELOPER</h3>
 				<div class="callbacks_container">
 					<ul class="rslides" id="slider3">
 						<li>
 							<div class="slider-info">
 						  		<p>Soluciono problemas del mundo real,</p>
-						  		<p>bajo el paradigma orientación a objetos.</p>
+						  		<p>bajo el paradigma de orientación a objetos.</p>
 							</div>
 						</li>
 						<li>

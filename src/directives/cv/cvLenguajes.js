@@ -12,13 +12,13 @@ function cvLenguajes() {
 				title: 'Javascript',
 				skills: [
 			 		'Angular', 'Backbone','Bower', 'Gulp',
-				  	'Borwserify', 'Node'
+				  	'Browserify', 'Node'
 			  	]
 			}, {
 				title: 'C#',
 				skills: [
 			 		'Asp.net MVC 5','LINQ',
-				  	'Entitie Framework','Visual Studio 2015',
+				  	'Entitie Framework','-',
 				  	'-', '-' 
 			  	]
 			}, {
@@ -91,7 +91,7 @@ function cvLenguajes() {
 					skills="habilidad.skills">
 				</habilidad>
 
-		 	</div>}
+		 	</div>
 
 	 	</div>
 		`

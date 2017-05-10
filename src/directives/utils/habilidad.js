@@ -8,6 +8,11 @@ function habilidad() {
 
 		},
 		template: `
+		<style>
+			.skills__content .panel .panel-heading {
+				border-bottom: 1px solid #fb9902;
+			}
+		</style>
 		<div class="col-xs-4">
 			<div class="panel">
 			 	<div class="panel-heading">

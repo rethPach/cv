@@ -41991,9 +41991,18 @@ module.exports = {
 
 function cvAbout() {
 	return {
-		link: function link() {},
+		link: function link($scope) {
+			$scope.developer = {
+				nombre: 'Nazareth Pacheco',
+				edad: 27,
+				direccion: 'Caracas, Venezuela',
+				email: 'nazarethj.pacheco@gmail.com',
+				mailto: 'mailto:nazarethj.pacheco@gmail.com',
+				hobbies: 'Cocinar, Baloncesto, Robotica, Comics, Cine, Open Ecology.'
+			};
+		},
 
-		template: '\n\t\t<style>\n\t\t\th3.w3l_head {\n\t\t\t\tcolor: #525252;\n\t\t\t}\n\n\t\t\tp.w3ls_head_para  {\n\t\t\t\tcolor: #064661;\n\t\t\t}\n\n\t\t\t.w3ls-agile-left-info {\n\t\t\t\tborder-bottom: 1px solid #525252;\n\t\t\t}\n\t\t\t\n\t\t\t.w3ls-agile-left-info a, .education-agile-w3l-year h6 {\n\t\t\t\tcolor: #525252;\n\t\t\t}\n\n\t\t\t.education-agile-w3l-year {\n\t\t\t    border-left: 2px solid #fb9902;\n\t\t\t}\n\n\t\t\th4 .btn-link {\n\t\t\t\tcolor: #fb9902\n\t\t\t}\n\n\t\t</style>\n\t\t<div class="about" id="about">\n\t\t\t<div class="container">\n\t\t\t\t<h3 class="w3l_head">Sobre Mi</h3>\n\t\t\t\t<p class="w3ls_head_para">Informacion Personal.</p>\n\t\t\t\t<div class="w3l-grids-about">\n\t\t\t\t\t<div class="col-md-5 w3ls-ab-right">\n\t\t\t\t\t\t<div class="agile-about-right-img">\n\t\t\t\t\t\t\t<img src="dist/images/ab.jpg" alt="">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="col-md-7 w3ls-agile-left">\n\t\t\t\t\t\t<div class="w3ls-agile-left-info">\n\t\t\t\t\t\t\t<h4>Nombre</h4>\n\t\t\t\t\t\t\t<p>Nazareth Pacheco</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="w3ls-agile-left-info">\n\t\t\t\t\t\t\t<h4>Sexo</h4>\n\t\t\t\t\t\t\t<p>Masculino</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="w3ls-agile-left-info">\n\t\t\t\t\t\t\t<h4>Direccion</h4>\n\t\t\t\t\t\t\t<p>Caracas</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="w3ls-agile-left-info">\n\t\t\t\t\t\t\t<h4>Email</h4>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<a href="mailto:nazarethj.pacheco@gmail.com">\n\t\t\t\t\t\t\t\t\tnazarethj.pacheco@gmail.com\n\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="w3ls-agile-left-info">\n\t\t\t\t\t\t\t<h4>Hobbies</h4>\n\t\t\t\t\t\t\t<p>Cocinar, Baloncesto, Robotica, Comics, Cine, Open Ecology.</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="clearfix"> </div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t'
+		template: '\n\t\t<style>\n\t\t\th3.w3l_head {\n\t\t\t\tcolor: #525252;\n\t\t\t}\n\n\t\t\tp.w3ls_head_para  {\n\t\t\t\tcolor: #064661;\n\t\t\t}\n\n\t\t\t.w3ls-agile-left-info {\n\t\t\t\tborder-bottom: 1px solid #525252;\n\t\t\t}\n\t\t\t\n\t\t\t.w3ls-agile-left-info a, .education-agile-w3l-year h6 {\n\t\t\t\tcolor: #fb9902;\n\t\t\t}\n\n\t\t\t.education-agile-w3l-year {\n\t\t\t    border-left: 2px solid #fb9902;\n\t\t\t}\n\n\t\t\th4 .btn-link {\n\t\t\t\tcolor: #fb9902\n\t\t\t}\n\n\t\t\t.w3ls-agile-left-info p {\n\t\t\t\tcolor: #064661\n\t\t\t}\n\n\t\t\t.w3ls-agile-left-info h4, .social-info h4 {\n\t\t\t\tcolor: #525252;\n\t\t\t}\n\n\t\t\t.w3ls-agile-left-info a:hover, .education-agile-w3l-year h6:hover {\n\t\t\t\ttext-decoration: underline;\n\t\t\t}\n\n\t\t</style>\n\t\t<div class="about" id="about">\n\t\t\t<div class="container">\n\t\t\t\t<h3 class="w3l_head">Sobre Mi</h3>\n\t\t\t\t<p class="w3ls_head_para">Informaci\xF3n Personal.</p>\n\t\t\t\t<div class="w3l-grids-about">\n\t\t\t\t\t<div class="col-md-5 w3ls-ab-right">\n\t\t\t\t\t\t<div class="agile-about-right-img">\n\t\t\t\t\t\t\t<img src="dist/images/ab.jpg" alt="">\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="col-md-7 w3ls-agile-left">\n\t\t\t\t\t\t<div class="w3ls-agile-left-info">\n\t\t\t\t\t\t\t<h4>Nombre</h4>\n\t\t\t\t\t\t\t<p>{{developer.nombre}}</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="w3ls-agile-left-info">\n\t\t\t\t\t\t\t<h4>Edad</h4>\n\t\t\t\t\t\t\t<p>{{developer.edad}}</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="w3ls-agile-left-info">\n\t\t\t\t\t\t\t<h4>Direcci\xF3n</h4>\n\t\t\t\t\t\t\t<p>{{developer.direccion}}</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="w3ls-agile-left-info">\n\t\t\t\t\t\t\t<h4>Email</h4>\n\t\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t\t<a href="{{developer.mailto}}">\n\t\t\t\t\t\t\t\t\t{{developer.email}}\n\t\t\t\t\t\t\t\t</a>\n\t\t\t\t\t\t\t</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="w3ls-agile-left-info">\n\t\t\t\t\t\t\t<h4>Hobbies</h4>\n\t\t\t\t\t\t\t<p>{{developer.hobbies}}</p>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class="clearfix"> </div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t'
 	};
 }
 
@@ -42008,7 +42017,7 @@ module.exports = {
 function cvAptitudes() {
 	return {
 		link: function link($scope) {},
-		template: '\n\t\t<div class="education" id="experiencia">\n\t    \t\n\t    \t<cv-experiencia></cv-experiencia>\n\n\t\t\t<div class="education" id="education">\n\n\t\t\t\t<cv-lenguajes></cv-lenguajes>\n\n\t\t\t</div>\n\n\t \t\t<div class="clearfix"> </div>\n\n\t\t</div>\n\t\t'
+		template: '\n\t\t<style>\n\t\t\th3.w3l_head.two {\n\t\t\t\ttext-shadow: 1px 1px black;\n\t\t\t}\n\t\t</style>\n\t\t<div class="education" id="experiencia">\n\t    \t\n\t    \t<cv-experiencia></cv-experiencia>\n\n\t\t\t<div class="education" id="education">\n\n\t\t\t\t<cv-lenguajes></cv-lenguajes>\n\n\t\t\t</div>\n\n\t \t\t<div class="clearfix"> </div>\n\n\t\t</div>\n\t\t'
 	};
 }
 
@@ -42026,32 +42035,32 @@ function cvExperiencia() {
 			$scope.experiencias = [{
 				empresa: 'Medinet',
 				duracion: 'Enero 2017 - Abril 2017',
-				cargo: 'Fullstack-web developer team leader, scrum master padawan.',
+				cargo: 'Fullstack-web developer team leader.',
 				works: [{
 
 					descripcion: [['Desarrollo de aplicación Business Inteligence que mostraba el', 'tiempo laboral: efectivo, perdido, sobretiempo;', 'de un empleado administrativo x en un rango tiempo x;', 'acomplandome a un lector de tarjetas(Entrada/Salida).'].join(' ')],
 
 					herramientas: 'ASP.net MVC, C#, Angular js Como Capa de presentación.'
 				}, {
-					descripcion: [['Desarrollo de un CMS Ecommerce con la integración de una', 'pasarela de pago (123Pago). El negocio consistía en venta de', 'boletos, control del inventario de: boletos vendidos,', 'disponibles, ofertados; validación del boleto a través de un', 'código seguridad generado por la aplicación.'].join(' '), ['Proyecto legacy, donde aterrice y puse a prueba de', 'manera satisfactoria conceptos de refactoring.'].join(' ')],
+					descripcion: [['Desarrollo de un CMS Ecommerce con la integración de una', 'pasarela de pago (123Pago). El negocio consistía en venta de', 'boletos, control del inventario de boletos vendidos,', 'disponibles, ofertados y validación del boleto a través de un', 'código seguridad generado por la aplicación.'].join(' '), ['Proyecto legacy, donde aterrice y puse a prueba de', 'manera satisfactoria conceptos de refactoring.'].join(' ')],
 
 					herramientas: 'Java, Javascript, Spring Framework, Angular Js como capa de presentación.'
 				}]
 			}, {
 				empresa: 'Soluciones As',
 				duracion: 'Mayo 2016 - Enero 2017',
-				cargo: 'Fullstack-web developer team leader, scrum master padawan.',
+				cargo: 'Fullstack-web developer team leader.',
 				works: [{
-					descripcion: [['Desarrollo de una aplicación de venta de boletos sobre', 'eventos, para cliente en argentina. El negocio era bastante', 'similar al mencionado en la experiencia anterior,', 'con la particularidad que la validación del boleto', 'era a través de un app Mobile que desarrolle con Ionic esta', 'escaneaba un código Qr asociado a una entrada y Validadaba la entradada.', 'Adicionalmente incluía una Session Bussiness Inteligence que mostraba', 'información relacionada a:', 'boletos vendidos,', 'boletos ofertados y boletos disponibles.', 'Reportes de asistencia para un evento.'].join(' ')],
+					descripcion: [['Desarrollo de una aplicación de venta de boletos sobre', 'eventos, para cliente en argentina. El negocio era bastante', 'similar al mencionado en la experiencia anterior,', 'con la particularidad que la validación del boleto', 'era a través de un app Mobile desarrollada con Ionic que', 'escaneaba un código Qr asociado a una entrada.', 'Adicionalmente incluía una Session Bussiness Inteligence', 'que mostraba información relacionada a boletos vendidos,', 'ofertados y disponibles para un evento,', 'ademas de ofrecer control de asistencia.'].join(' ')],
 
-					herramientas: 'Javascript, Laravel 5,Angular Js como capa de presentación.'
+					herramientas: 'PHP, Javascript, Laravel 5,Angular Js como capa de presentación.'
 				}]
 			}, {
 				empresa: 'Freelance',
 				duracion: 'Febrero 2013 - Mayo 2016',
 				cargo: 'Fullstack-web Developer.',
 				works: [{
-					descripcion: [['Desarrollo de un ecommerce para venta y alquiler de', 'equipos para ferreteria y construccion'].join(' ')],
+					descripcion: [['Desarrollo de un ecommerce para venta y alquiler de', 'equipos para ferreteria y construcción'].join(' ')],
 					herramientas: 'PHP, Javascript, Cake, Jquery.'
 				}, {
 					descripcion: [['Desarrollo de help desk para la gestión de incidencias', 'dirigidas a un departamento de soporte técnico, asignación de', 'tickets para analistas implementando algoritmo round robin'].join(' ')],
@@ -42065,7 +42074,7 @@ function cvExperiencia() {
 				}]
 			}];
 		},
-		template: '\n\t\t<style>\n\n\t\t\t.divider {\n\t\t\t\tborder-top: 1px solid #ddd;\n\t\t\t}\n\n\t\t\t.education-agile-w3l-info__content {\n\t\t\t\tdisplay: none;\n\t\t\t}\n\t\t\t\n\t\t\t.education-agile-w3l-info {\n\t\t\t\tfloat: left;\n\t\t\t}\n\n\t\t\t.education-agile-w3l {\n\t\t\t\tmargin: 40px 0px;\n\t\t\t}\n\n\t\t\th3.w3l_head.three {\n\t\t\t\tcolor: #525252\n\t\t\t}\n\t\t\t\n\t\t</style>\n\t\t<div class="col-md-12 education-w3l">\n\t\t\t<h3 class="w3l_head three">Experiencia</h3>\n\t\t\t<div class="education-agile-grids">\n\t\t\t\t<experiencia-helper\n\t\t\t\t\tng-repeat="experiencia in experiencias" \n\t\t\t\t\tempresa="{{experiencia.empresa}}"\n\t\t\t\t\tduracion="{{experiencia.duracion}}"\n\t\t\t\t\tcargo="{{experiencia.cargo}}"\n\t\t\t\t\tworks="experiencia.works">\n\t\t\t\t</experiencia-helper>\n\t\t\t</div>\n\t\t</div>\n\t\t'
+		template: '\n\t\t<style>\n\n\t\t\t.divider {\n\t\t\t\tborder-top: 1px solid #ddd;\n\t\t\t}\n\n\t\t\t.education-agile-w3l-info h4{\n\t\t\t\tcolor: #fb9902;\n\t\t\t}\n\n\t\t\t.education-agile-w3l-year h4 {\n\t\t\t\tcolor: #064661;\n\t\t\t}\n\n\t\t\t.education-agile-w3l-info__content {\n\t\t\t\tdisplay: none;\n\t\t\t}\n\t\t\t\n\t\t\t.education-agile-w3l-info {\n\t\t\t\tfloat: left;\n\t\t\t}\n\n\t\t\t.education-agile-w3l {\n\t\t\t\tmargin: 40px 0px;\n\t\t\t}\n\n\t\t\th3.w3l_head.three {\n\t\t\t\tcolor: #064661\n\t\t\t}\n\n\t\t\t.education-agile-w3l-year {\n\t\t\t\tborder-left: 1px solid #fb9902;\n\t\t\t}\n\n\t\t\t.education-agile-w3l-year h6 {\n\t\t\t\tcolor: #525252;\n\t\t\t}\n\n\t\t\t.btn-link {\n\t\t\t\tcolor: #064661;\n\t\t\t}\n\t\t\t\n\t\t</style>\n\t\t<div class="col-md-12 education-w3l">\n\t\t\t<h3 class="w3l_head three">Experiencia</h3>\n\t\t\t<div class="education-agile-grids">\n\t\t\t\t<experiencia-helper\n\t\t\t\t\tng-repeat="experiencia in experiencias" \n\t\t\t\t\tempresa="{{experiencia.empresa}}"\n\t\t\t\t\tduracion="{{experiencia.duracion}}"\n\t\t\t\t\tcargo="{{experiencia.cargo}}"\n\t\t\t\t\tworks="experiencia.works">\n\t\t\t\t</experiencia-helper>\n\t\t\t</div>\n\t\t</div>\n\t\t'
 	};
 }
 
@@ -42086,8 +42095,8 @@ function cvFooter() {
 				value: 'Caracas, Venezuela'
 			}, $scope.email = {
 				key: 'Email',
-				value: 'naiger67@gmail.com',
-				mailto: 'mailto:naiger67@gmail.com'
+				value: 'nazarethj.pacheco@gmail.com',
+				mailto: 'nazarethj.pacheco@gmail.com'
 			};
 
 			$scope.llamar = {
@@ -42095,7 +42104,7 @@ function cvFooter() {
 				value: '02125374003'
 			};
 		},
-		template: '\n\t\t<style>\n\n\t\t\t.w3l_footer {\n\t\t\t\tbackground: #525252\n\t\t\t}\n\n\t\t\t.w3ls_footer_grid_leftr h4 {\n\t\t\t\t\n\t\t\t}\n\n\t\t\t.w3ls_footer_grid_left:hover .w3ls_footer_grid_leftl {\n\t\t\t\tcolor: #fb9902\n\t\t\t}\n\n\t\t\t.w3ls_footer_grid_leftl {\n\t\t\t\tbackground: #064661;\n\t\t\t}\n\n\t\t\t.w3ls_footer_grid_left:hover .w3ls_footer_grid_leftr h4 {\n\t\t\t\tcolor: #fb9902\n\t\t\t}\n\n\t\t</style>\n\t\t<div class="w3l_footer" id="contacto">\n\t\t\t<div class="container">\n\t\t\t\t\n\t\t\t\t<div class="w3ls_footer_grids">\n\t\t\t\t\t\n\t\t\t\t\t<div class="w3ls_footer_grid">\n\t\t\t\t\t\t<div class="col-md-4 w3ls_footer_grid_left">\n\t\t\t\t\t\t\t<div class="w3ls_footer_grid_leftl">\n\t\t\t\t\t\t\t\t<i class="fa fa-map-marker" aria-hidden="true"></i>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class="w3ls_footer_grid_leftr">\n\t\t\t\t\t\t\t\t<h4>{{direccion.key}}</h4>\n\t\t\t\t\t\t\t\t<p>{{direccion.value}}</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class="clearfix"> </div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="col-md-4 w3ls_footer_grid_left">\n\t\t\t\t\t\t\t<div class="w3ls_footer_grid_leftl">\n\t\t\t\t\t\t\t\t<i class="fa fa-envelope" aria-hidden="true"></i>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class="w3ls_footer_grid_leftr">\n\t\t\t\t\t\t\t\t<h4>{{email.key}}</h4>\n\t\t\t\t\t\t\t\t<a href="{{email.mailto}}">{{email.value}}</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class="clearfix"> </div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="col-md-4 w3ls_footer_grid_left">\n\t\t\t\t\t\t\t<div class="w3ls_footer_grid_leftl">\n\t\t\t\t\t\t\t\t<i class="fa fa-phone" aria-hidden="true"></i>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class="w3ls_footer_grid_leftr">\n\t\t\t\t\t\t\t\t<h4>{{llamar.key}}</h4>\n\t\t\t\t\t\t\t\t<p>{{llamar.value}}</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class="clearfix"> </div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="clearfix"> </div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t'
+		template: '\n\t\t<style>\n\n\t\t\t.w3ls_footer_grid_leftr h4 {\n\t\t\t\t\n\t\t\t}\n\n\t\t\t.w3ls_footer_grid_left:hover .w3ls_footer_grid_leftl {\n\t\t\t\tcolor: #fb9902\n\t\t\t}\n\n\t\t\t.w3ls_footer_grid_leftl {\n\t\t\t\tbackground: #fb9902;\n\t\t\t}\n\n\t\t\t.w3ls_footer_grid_left:hover .w3ls_footer_grid_leftr h4 {\n\t\t\t\tcolor: #fb9902\n\t\t\t}\n\n\t\t\t.w3ls_footer_grid_left {\n\t\t\t\tbackground: #353537;\n\t\t\t}\n\n\t\t\t.w3l_footer {\n\t\t\t\tbackground: #064661\n\t\t\t}\n\n\t\t</style>\n\t\t<div class="w3l_footer" id="contacto">\n\t\t\t<div class="container">\n\t\t\t\t\n\t\t\t\t<div class="w3ls_footer_grids">\n\t\t\t\t\t\n\t\t\t\t\t<div class="w3ls_footer_grid">\n\t\t\t\t\t\t<div class="col-md-4 w3ls_footer_grid_left">\n\t\t\t\t\t\t\t<div class="w3ls_footer_grid_leftl">\n\t\t\t\t\t\t\t\t<i class="fa fa-map-marker" aria-hidden="true"></i>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class="w3ls_footer_grid_leftr">\n\t\t\t\t\t\t\t\t<h4>{{direccion.key}}</h4>\n\t\t\t\t\t\t\t\t<p>{{direccion.value}}</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class="clearfix"> </div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="col-md-4 w3ls_footer_grid_left">\n\t\t\t\t\t\t\t<div class="w3ls_footer_grid_leftl">\n\t\t\t\t\t\t\t\t<i class="fa fa-envelope" aria-hidden="true"></i>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class="w3ls_footer_grid_leftr">\n\t\t\t\t\t\t\t\t<h4>{{email.key}}</h4>\n\t\t\t\t\t\t\t\t<a href="{{email.mailto}}">{{email.value}}</a>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class="clearfix"> </div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="col-md-4 w3ls_footer_grid_left">\n\t\t\t\t\t\t\t<div class="w3ls_footer_grid_leftl">\n\t\t\t\t\t\t\t\t<i class="fa fa-phone" aria-hidden="true"></i>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class="w3ls_footer_grid_leftr">\n\t\t\t\t\t\t\t\t<h4>{{llamar.key}}</h4>\n\t\t\t\t\t\t\t\t<p>{{llamar.value}}</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t<div class="clearfix"> </div>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t\t<div class="clearfix"> </div>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t'
 	};
 }
 
@@ -42116,10 +42125,10 @@ function cvLenguajes() {
 				skills: ['Laravel', 'Symfony', 'Codeigniter', 'Doctrine', 'Composer', 'Cake']
 			}, {
 				title: 'Javascript',
-				skills: ['Angular', 'Backbone', 'Bower', 'Gulp', 'Borwserify', 'Node']
+				skills: ['Angular', 'Backbone', 'Bower', 'Gulp', 'Browserify', 'Node']
 			}, {
 				title: 'C#',
-				skills: ['Asp.net MVC 5', 'LINQ', 'Entitie Framework', 'Visual Studio 2015', '-', '-']
+				skills: ['Asp.net MVC 5', 'LINQ', 'Entitie Framework', '-', '-', '-']
 			}, {
 				title: 'Java',
 				skills: ['JSP', 'Servlets', 'JSF', 'JPA', 'Spring', '-']
@@ -42131,7 +42140,7 @@ function cvLenguajes() {
 				skills: ['SCRUM', 'eXtreme Programming', '-', '-', '-', '-']
 			}];
 		},
-		template: '\n\t\t<style>\n\t\t\t.skills {\n\t\t\t\tpadding-top: 64px;\n\t\t\t}\n\n\t\t\t.skills__content {\n\t\t\t\tmargin-top: 32px;\n\t\t\t\tpadding: 0px 64px;\n\t\t\t}\n\t\t\t\n\t\t\t.panel {\n\t\t\t\tborder-radius: 0px;\n\t\t\t\tborder: 1px solid #064661;\n\t\t\t\tbackground: transparent;\n\t\t\t}\n\n\t\t\t.skills__content .panel .panel-heading {\n\t\t\t\tbackground: #064661;\n\t\t\t\tcolor: #fb9902;\n\t\t\t}\n\n\t\t\t.list-group li {\n\t\t\t\tfont-size: .7em;\n\t\t\t\tcolor: #064661;\n\t\t\t\tbackground-color: #F3F3F3;\n\t\t\t}\n\n\t\t\t.panel-heading .panel-title {\n\t\t\t    white-space: nowrap;\n\t\t\t    overflow: hidden;\n\t\t\t    text-overflow: ellipsis;\n\t\t\t    line-height: normal;\n\t\t\t    width: 75%;\n\t\t\t    padding-top: 8px;\n\t\t\t}\n\n\t\t</style>\n\t\t<div class="col-md-12 skills" id="habilidades">\n\n\t\t\t<h3 class="w3l_head two">Habilidades</h3>\n\t     \t\n\t\t\t<div class="row skills__content">\n\t\t\t\t\n\t\t\t\t<habilidad \n\t\t\t\t\tng-repeat="habilidad in habilidades"\n\t\t\t\t\ttitle="{{habilidad.title}}"\n\t\t\t\t\tskills="habilidad.skills">\n\t\t\t\t</habilidad>\n\n\t\t \t</div>}\n\n\t \t</div>\n\t\t'
+		template: '\n\t\t<style>\n\t\t\t.skills {\n\t\t\t\tpadding-top: 64px;\n\t\t\t}\n\n\t\t\t.skills__content {\n\t\t\t\tmargin-top: 32px;\n\t\t\t\tpadding: 0px 64px;\n\t\t\t}\n\t\t\t\n\t\t\t.panel {\n\t\t\t\tborder-radius: 0px;\n\t\t\t\tborder: 1px solid #064661;\n\t\t\t\tbackground: transparent;\n\t\t\t}\n\n\t\t\t.skills__content .panel .panel-heading {\n\t\t\t\tbackground: #064661;\n\t\t\t\tcolor: #fb9902;\n\t\t\t}\n\n\t\t\t.list-group li {\n\t\t\t\tfont-size: .7em;\n\t\t\t\tcolor: #064661;\n\t\t\t\tbackground-color: #F3F3F3;\n\t\t\t}\n\n\t\t\t.panel-heading .panel-title {\n\t\t\t    white-space: nowrap;\n\t\t\t    overflow: hidden;\n\t\t\t    text-overflow: ellipsis;\n\t\t\t    line-height: normal;\n\t\t\t    width: 75%;\n\t\t\t    padding-top: 8px;\n\t\t\t}\n\n\t\t</style>\n\t\t<div class="col-md-12 skills" id="habilidades">\n\n\t\t\t<h3 class="w3l_head two">Habilidades</h3>\n\t     \t\n\t\t\t<div class="row skills__content">\n\t\t\t\t\n\t\t\t\t<habilidad \n\t\t\t\t\tng-repeat="habilidad in habilidades"\n\t\t\t\t\ttitle="{{habilidad.title}}"\n\t\t\t\t\tskills="habilidad.skills">\n\t\t\t\t</habilidad>\n\n\t\t \t</div>\n\n\t \t</div>\n\t\t'
 	};
 }
 
@@ -42147,7 +42156,7 @@ function cvMain() {
 
 	return {
 
-		link: function link() {
+		link: function link($scope) {
 			var slider = $("#slider3");
 			var responsiveSlidesConfig = {
 				auto: true,
@@ -42166,7 +42175,7 @@ function cvMain() {
 			slider.responsiveSlides(responsiveSlidesConfig);
 		},
 
-		template: "\n\t\t<style>\n\t\t\t\n\t\t\t.slider-info {\n\t\t\t\tmargin-top: 6px;\n\t\t\t\theight: 60px;\n\t\t\t}\n\n\t\t\t.slider-info p, .banner h3, .banner h2 {\n\t\t\t\tletter-spacing: 3px;\n\t\t\t}\n\n\t\t\t.slider-info p {\n\t\t\t\tmargin: 3px 0px;\n\t\t\t\tfont-size: 12px;\n\t\t\t}\n\n\t\t\t.banner h3 {\n\t\t\t\tfont-size: 35px;\n\t\t\t\tcolor: #fb9902;\n\t\t\t\ttext-shadow: 1px 1px black;\n\t\t\t}\n\n\t\t\t.banner h2 {\n\t\t\t\tcolor: #525252;\n\t\t\t  \ttext-shadow: 2px 2px black;\n\t\t\t}\n\n\t\t\t.banner img {\n\t\t\t\tborder: 1px solid #fb9902;\n\t\t\t}\n\n\t\t\t.callbacks_tabs {\n\t\t\t\ttop: 90px;\n\t\t\t}\n\n\t\t</style>\n\t\t<div class=\"main\" id=\"home\">\n\t\t\t<div class=\"banner\">\n\t\t\t\t<img src=\"dist/images/pic2.jpg\" alt=\" \" class=\"img-responsive\">\n\t\t\t\t<h2>Nazareth Pacheco</h2>\n\t\t\t\t<h3>Programador / WEB DEVELOPER</h3>\n\t\t\t\t<div class=\"callbacks_container\">\n\t\t\t\t\t<ul class=\"rslides\" id=\"slider3\">\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t<div class=\"slider-info\">\n\t\t\t\t\t\t  \t\t<p>Soluciono problemas del mundo real,</p>\n\t\t\t\t\t\t  \t\t<p>bajo el paradigma orientaci\xF3n a objetos.</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t<div class=\"slider-info\">\n\t\t\t\t\t\t\t   <p>Preocupado por crear soluciones basadas en,</p> \n\t\t\t\t\t\t\t   <p>c\xF3digo de calidad practicante SCRUM y</p>\n\t\t\t\t\t\t\t   <p>eXtreme programming.</p>\n\t\t\t\t\t\t    </div>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t<div class=\"slider-info\">\n\t\t\t\t\t\t\t\t<p>Maker, Aficionado a la rob\xF3tica.</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t</ul>\n\t\t\t\t\t<div class=\"clearfix\"></div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t"
+		template: "\n\t\t<style>\n\t\t\t\n\t\t\t.slider-info {\n\t\t\t\tmargin-top: 6px;\n\t\t\t\theight: 60px;\n\t\t\t}\n\n\t\t\t.slider-info p, .banner h3, .banner h2 {\n\t\t\t\tletter-spacing: 3px;\n\t\t\t}\n\n\t\t\t.slider-info p {\n\t\t\t\tmargin: 3px 0px;\n\t\t\t\tfont-size: 12px;\n\t\t\t}\n\n\t\t\t.banner h3 {\n\t\t\t\tfont-size: 35px;\n\t\t\t\tcolor: #fb9902;\n\t\t\t\ttext-shadow: 1px 1px black;\n\t\t\t}\n\n\t\t\t.banner h2 {\n\t\t\t\tcolor: #525252;\n\t\t\t  \ttext-shadow: 2px 2px black;\n\t\t\t}\n\n\t\t\t.banner img {\n\t\t\t\tborder: 2px solid white;\n\t\t\t}\n\n\t\t\t.callbacks_tabs {\n\t\t\t\ttop: 90px;\n\t\t\t}\n\n\t\t\t.top-links {\n\t\t\t\tmargin-bottom: 65px;\n\t\t\t\tpadding-left: 25px\n\t\t\t}\n\n\t\t</style>\n\t\t<div class=\"main\" id=\"home\">\n\t\t\t<div class=\"banner\">\n\t\t\t\t<ul class=\"top-links\">\n\t\t\t\t\t<li>\n\t\t\t\t\t\t<a href=\"https://github.com/rethPach\">\n\t\t\t\t\t\t\t<i class=\"fa fa-fa fa-github\"></i>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t\t\t<a href=\"https://twitter.com/nazzarth\">\n\t\t\t\t\t\t\t<i class=\"fa fa-twitter\"></i>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</li>\n\t\t\t\t\t<li>\n\t\t\t\t\t\t<a href=\"https://www.linkedin.com/in/nazareth-pacheco-3233a2141/\">\n\t\t\t\t\t\t\t<i class=\"fa fa-linkedin\"></i>\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</li>\n\t\t\t\t</ul>\n\t\t\t\t<img src=\"dist/images/fotoCv.jpg\" alt=\" \" class=\"img-responsive\">\n\t\t\t\t<h2>Nazareth Pacheco</h2>\n\t\t\t\t<h3>Modelador / WEB DEVELOPER</h3>\n\t\t\t\t<div class=\"callbacks_container\">\n\t\t\t\t\t<ul class=\"rslides\" id=\"slider3\">\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t<div class=\"slider-info\">\n\t\t\t\t\t\t  \t\t<p>Soluciono problemas del mundo real,</p>\n\t\t\t\t\t\t  \t\t<p>bajo el paradigma de orientaci\xF3n a objetos.</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t<div class=\"slider-info\">\n\t\t\t\t\t\t\t   <p>Preocupado por crear soluciones basadas en,</p> \n\t\t\t\t\t\t\t   <p>c\xF3digo de calidad practicante SCRUM y</p>\n\t\t\t\t\t\t\t   <p>eXtreme programming.</p>\n\t\t\t\t\t\t    </div>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t\t<li>\n\t\t\t\t\t\t\t<div class=\"slider-info\">\n\t\t\t\t\t\t\t\t<p>Maker, Aficionado a la rob\xF3tica.</p>\n\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t</li>\n\t\t\t\t\t</ul>\n\t\t\t\t\t<div class=\"clearfix\"></div>\n\t\t\t\t</div>\n\t\t\t</div>\n\t\t</div>\n\t\t"
 
 	};
 }
@@ -42184,7 +42193,7 @@ function cvNavigation() {
 	return {
 		link: function link() {},
 
-		template: '\n\t\t<style>\n\t\t\t.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {\n\t\t\t\tcolor: #fb9902 !important;\n\t\t\t}\n\t\t</style>\n\t\t<div class="w3_navigation">\n\n\t\t\t<div class="container">\n\n\t\t\t\t<nav class="navbar navbar-default">\n\n\t\t\t\t\t<div class="navbar-header">\n\n\t\t\t\t\t  <button \n\t\t\t\t\t  \ttype="button" \n\t\t\t\t\t  \tclass="navbar-toggle collapsed" \n\t\t\t\t\t  \tdata-toggle="collapse" \n\t\t\t\t\t  \tdata-target="#bs-example-navbar-collapse-1">\n\n\t\t\t\t\t\t\t<span class="sr-only">Toggle navigation</span>\n\t\t\t\t\t\t\t<span class="icon-bar"></span>\n\t\t\t\t\t\t\t<span class="icon-bar"></span>\n\t\t\t\t\t\t\t<span class="icon-bar"></span>\n\n\t\t\t\t\t  </button>\n\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">\n\t\t\t\t\t\t<nav class="cl-effect-1" id="cl-effect-1">\n\t\t\t\t\t\t\t<ul class="nav navbar-nav">\n\t\t\t\t\t\t\t\t<link-scroll \n\t\t\t\t\t\t\t\t\thref="{{\'about\'}}" \n\t\t\t\t\t\t\t\t\ttext="{{\'Sobre Mi\'}}">\n\t\t\t\t\t\t\t\t</link-scroll>\n\n\t\t\t\t\t\t\t\t<link-scroll \n\t\t\t\t\t\t\t\t\thref="{{\'services\'}}" \n\t\t\t\t\t\t\t\t\ttext="{{\'Que Puedo Aportar\'}}">\n\t\t\t\t\t\t\t\t</link-scroll>\n\n\t\t\t\t\t\t\t\t<link-scroll \n\t\t\t\t\t\t\t\t\thref="{{\'experiencia\'}}" \n\t\t\t\t\t\t\t\t\ttext="{{\'Experiencia\'}}">\n\t\t\t\t\t\t\t\t</link-scroll>\n\n\t\t\t\t\t\t\t\t<link-scroll \n\t\t\t\t\t\t\t\t\thref="{{\'habilidades\'}}" \n\t\t\t\t\t\t\t\t\ttext="{{\'Habilidades\'}}">\n\t\t\t\t\t\t\t\t</link-scroll>\n\n\t\t\t\t\t\t\t\t<link-scroll \n\t\t\t\t\t\t\t\t\thref="{{\'contacto\'}}" \n\t\t\t\t\t\t\t\t\ttext="{{\'Contacto\'}}">\n\t\t\t\t\t\t\t\t</link-scroll>\n\t\t\t\t\t\t\t</ul>\n\n\t\t\t\t\t\t</nav>\n\t\t\t\t\t\t\n\t\t\t\t\t</div>\n\n\t\t\t\t</nav>\n\n\t\t\t</div>\n\n\t\t</div>\n\t\t'
+		template: '\n\t\t<style>\n\t\t\t.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {\n\t\t\t\tcolor: #fb9902 !important;\n\t\t\t}\n\t\t</style>\n\t\t<div class="w3_navigation">\n\n\t\t\t<div class="container">\n\n\t\t\t\t<nav class="navbar navbar-default">\n\n\t\t\t\t\t<div class="navbar-header">\n\n\t\t\t\t\t  <button \n\t\t\t\t\t  \ttype="button" \n\t\t\t\t\t  \tclass="navbar-toggle collapsed" \n\t\t\t\t\t  \tdata-toggle="collapse" \n\t\t\t\t\t  \tdata-target="#bs-example-navbar-collapse-1">\n\n\t\t\t\t\t\t\t<span class="sr-only">Toggle navigation</span>\n\t\t\t\t\t\t\t<span class="icon-bar"></span>\n\t\t\t\t\t\t\t<span class="icon-bar"></span>\n\t\t\t\t\t\t\t<span class="icon-bar"></span>\n\n\t\t\t\t\t  </button>\n\n\t\t\t\t\t</div>\n\n\t\t\t\t\t<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">\n\t\t\t\t\t\t<nav class="cl-effect-1" id="cl-effect-1">\n\t\t\t\t\t\t\t<ul class="nav navbar-nav">\n\n\t\t\t\t\t\t\t\t<link-scroll \n\t\t\t\t\t\t\t\t\thref="{{\'services\'}}" \n\t\t\t\t\t\t\t\t\ttext="{{\'Que Puedo Aportar\'}}">\n\t\t\t\t\t\t\t\t</link-scroll>\n\n\t\t\t\t\t\t\t\t<link-scroll \n\t\t\t\t\t\t\t\t\thref="{{\'experiencia\'}}" \n\t\t\t\t\t\t\t\t\ttext="{{\'Experiencia\'}}">\n\t\t\t\t\t\t\t\t</link-scroll>\n\n\t\t\t\t\t\t\t\t<link-scroll \n\t\t\t\t\t\t\t\t\thref="{{\'habilidades\'}}" \n\t\t\t\t\t\t\t\t\ttext="{{\'Habilidades\'}}">\n\t\t\t\t\t\t\t\t</link-scroll>\n\n\t\t\t\t\t\t\t\t<link-scroll \n\t\t\t\t\t\t\t\t\thref="{{\'contacto\'}}" \n\t\t\t\t\t\t\t\t\ttext="{{\'Contacto\'}}">\n\t\t\t\t\t\t\t\t</link-scroll>\n\t\t\t\t\t\t\t</ul>\n\n\t\t\t\t\t\t</nav>\n\t\t\t\t\t\t\n\t\t\t\t\t</div>\n\n\t\t\t\t</nav>\n\n\t\t\t</div>\n\n\t\t</div>\n\t\t'
 
 	};
 }
@@ -42206,11 +42215,11 @@ function cvService() {
 			$scope.subtitle = "Comenzemos.";
 			$scope.sections = {
 
-				porQueContratarme: [['La deuda técnica es algo que suele pagarse muy caro. El Mayor aporte', 'qué puedo ofrecerle a un equipo es la reducción de la deuda técnica', 'aportando soluciones software fáciles de Mantener, Reutilizar y Escalar.'].join(' ')],
+				porQueContratarme: [['La deuda técnica es algo que suele pagarse muy caro. El mayor aporte', 'qué puedo ofrecerle a un equipo, es la reducción de la deuda técnica', 'aportando soluciones software fáciles de: Mantener, Reutilizar y Escalar.'].join(' ')],
 
-				workflow: [['Nunca reinventó la rueda.', 'Sigo fielmente las metodologías; SCRUM y eXtreme Programing', 'combinado éstas con ATDD.'].join(' '), ['Redacto historias de usuario y criterios de aceptación.', 'usando Gerkin languaje.'].join(' '), ['Implementó eXtreme programing:', 'TDD y todo lo que envuelve el concepto de código fácil de testear;', 'SOLID, GRASP, Funciones de orden superior, Patrones de diseño,', 'Arquitectura hexagonal, Refactoring.'].join(' ')],
+				workflow: [['Nunca reinventó la rueda.', 'Sigo fielmente las metodologías; SCRUM y eXtreme Programing', 'combinando éstas con ATDD.'].join(' '), ['Redacto historias de usuario y criterios de aceptación,', 'usando Gerkin languaje.'].join(' '), ['Implementó eXtreme programing', 'TDD y todo lo que envuelve el concepto de código fácil de testear:', 'SOLID, GRASP, Funciones de orden superior, Patrones de diseño,', 'Arquitectura hexagonal, Refactoring.'].join(' ')],
 
-				objetivos: [['Lograr un impacto en el paradigma que actualmente el sector tic', 'tiene sobre el software,  generando soluciones reales para personas reales,', 'implementando las mejores metodologías.'].join(' ')]
+				objetivos: [['Lograr un impacto en el paradigma que actualmente el sector tecnologico', 'tiene sobre el software,  generando soluciones reales para personas reales,', 'implementando las mejores metodologías.'].join(' ')]
 
 			};
 
@@ -42223,7 +42232,7 @@ function cvService() {
 			};
 		},
 
-		template: "\n\t\t<style>\n\t\t\th3.w3l_head.two {\n\t\t\t\tcolor: #fb9902;\n\t\t\t}\n\n\t\t\t#services p.w3ls_head_para {\n\t\t\t\tcolor: white;\n\t\t\t\ttext-shadow: 1px 1px black;\n\t\t\t}\n\n\t\t\t.list-gds h4 {\n\t\t\t\tcolor: #fb9902;\n\t\t\t}\n\t\t</style>\n\t\t<div class=\"service\" id=\"services\">\n\t    \t<div class=\"container\">\n\t\t \t\t<h3 class=\"w3l_head two\">{{title}}</h3>\n\t\t\t\t<p class=\"w3ls_head_para\">{{subtitle}}</p>\n\t    \t\t<div class=\"service-agileits\">\n\t\t\t\t\t<div class=\"col-md-4 list-gds text-center\">\n\t\t\t\t\t\t<i class=\"fa fa-cog\" aria-hidden=\"true\"></i>\n\t\t\t\t\t\t<h4>Por que contrarme</h4>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<cut-parrafo\n\t\t\t\t\t\t\t\ttitulo=\"{{'Por que contrarme'}}\"\n\t\t\t\t\t\t\t\tparrafo=\"sections.porQueContratarme\"\n\t\t\t\t\t\t\t\tresumen=\"resumen.porQueContratarme\" \n\t\t\t\t\t\t\t\tlimite=\"300\">\t\n\t\t\t\t\t\t\t</cut-parrafo>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col-md-4 list-gds text-center\">\n\t\t\t\t\t\t<i class=\"fa fa-laptop\" aria-hidden=\"true\"></i>\n\t\t\t\t\t\t<h4>Workflow</h4>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<cut-parrafo\n\t\t\t\t\t\t\t\ttitulo=\"{{'Workflow'}}\"\n\t\t\t\t\t\t\t\tparrafo=\"sections.workflow\"\n\t\t\t\t\t\t\t\tresumen=\"resumen.workflow\" \n\t\t\t\t\t\t\t\tlimite=\"220\">\t\n\t\t\t\t\t\t\t</cut-parrafo>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col-md-4 list-gds text-center\">\n\t\t\t\t\t\t<i class=\"fa fa-thumbs-o-up\" aria-hidden=\"true\"></i>\n\t\t\t\t\t\t<h4>Objetivos</h4>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<cut-parrafo\n\t\t\t\t\t\t\t\ttitulo=\"{{'Objetivos'}}\"\n\t\t\t\t\t\t\t\tparrafo=\"sections.objetivos\"\n\t\t\t\t\t\t\t\tresumen=\"resumen.objetivos\" \n\t\t\t\t\t\t\t\tlimite=\"300\">\t\n\t\t\t\t\t\t\t</cut-parrafo>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t</div>\t\t\n\t\t \t\t</div>\n\t  \t\t</div>\n\t \t</div>\n\t\t"
+		template: "\n\t\t<style>\n\t\t\th3.w3l_head.two {\n\t\t\t\tcolor: #fb9902;\n\t\t\t}\n\n\t\t\t#services p.w3ls_head_para {\n\t\t\t\tcolor: white;\n\t\t\t\ttext-shadow: 1px 1px black;\n\t\t\t}\n\n\t\t\t.list-gds h4 {\n\t\t\t\tcolor: #fb9902;\n\t\t\t}\n\t\t\t#services {\n\t\t\t\ttext-shadow: 1px 1px black;\n\t\t\t}\n\t\t</style>\n\t\t<div class=\"service\" id=\"services\">\n\t    \t<div class=\"container\">\n\t\t \t\t<h3 class=\"w3l_head two\">{{title}}</h3>\n\t\t\t\t<p class=\"w3ls_head_para\">{{subtitle}}</p>\n\t    \t\t<div class=\"service-agileits\">\n\t\t\t\t\t<div class=\"col-md-4 list-gds text-center\">\n\t\t\t\t\t\t<i class=\"fa fa-cog\" aria-hidden=\"true\"></i>\n\t\t\t\t\t\t<h4>\xBFPor que contrarme?</h4>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<cut-parrafo\n\t\t\t\t\t\t\t\ttitulo=\"{{'Por que contrarme'}}\"\n\t\t\t\t\t\t\t\tparrafo=\"sections.porQueContratarme\"\n\t\t\t\t\t\t\t\tresumen=\"resumen.porQueContratarme\" \n\t\t\t\t\t\t\t\tlimite=\"300\">\t\n\t\t\t\t\t\t\t</cut-parrafo>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col-md-4 list-gds text-center\">\n\t\t\t\t\t\t<i class=\"fa fa-laptop\" aria-hidden=\"true\"></i>\n\t\t\t\t\t\t<h4>Workflow</h4>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<cut-parrafo\n\t\t\t\t\t\t\t\ttitulo=\"{{'Workflow'}}\"\n\t\t\t\t\t\t\t\tparrafo=\"sections.workflow\"\n\t\t\t\t\t\t\t\tresumen=\"resumen.workflow\" \n\t\t\t\t\t\t\t\tlimite=\"220\">\t\n\t\t\t\t\t\t\t</cut-parrafo>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t</div>\n\t\t\t\t\t<div class=\"col-md-4 list-gds text-center\">\n\t\t\t\t\t\t<i class=\"fa fa-thumbs-o-up\" aria-hidden=\"true\"></i>\n\t\t\t\t\t\t<h4>Objetivos</h4>\n\t\t\t\t\t\t<p>\n\t\t\t\t\t\t\t<cut-parrafo\n\t\t\t\t\t\t\t\ttitulo=\"{{'Objetivos'}}\"\n\t\t\t\t\t\t\t\tparrafo=\"sections.objetivos\"\n\t\t\t\t\t\t\t\tresumen=\"resumen.objetivos\" \n\t\t\t\t\t\t\t\tlimite=\"300\">\t\n\t\t\t\t\t\t\t</cut-parrafo>\n\t\t\t\t\t\t</p>\n\t\t\t\t\t</div>\t\t\n\t\t \t\t</div>\n\t  \t\t</div>\n\t \t</div>\n\t\t"
 
 	};
 }
@@ -42272,7 +42281,7 @@ function cutParrafo() {
 				function cancel() {}
 			}
 		},
-		template: '\n\n\t\t<p>\n\t\t\t<span>\n\t\t\t\t{{ resumen | limitTo: limite }}\n\t\t\t</span>\n\t\t\t<button \n\t\t\t\tng-click="mostrarParrafoCompleto()"\n\t\t\t\tng-if="resumen.length > limite"\n\t\t\t\ttype="button" \n\t\t\t\tclass="btn btn-link glyphicon glyphicon-option-horizontal">\t\n\t\t\t</button>\n\t\t</p>\n\n\n\t\t<script type="text/ng-template" id="myModalContent.html">\n\t\t\t<style>\n\t\t\t\t\n\t\t\t\t.modal-content {\n\t\t\t\t\tborder-radius: 0px;\n\t\t\t\t\tbackground: rgba(6, 70, 97, 0.95);\n\t\t\t\t\tcolor: white;\n\t\t\t\t\ttext-shadow: 1px 1px black;\n\t\t\t\t}\n\n\t\t\t\t.modal-body {\n\t\t\t\t\tpadding: 0px 40px 40px 40px;\n\t\t\t\t}\n\n\t\t\t\t.modal-title {\n\t\t\t\t\ttext-align: center;\n\t\t\t\t\tcolor: #fb9902;\n\t\t\t\t}\n\n\t\t\t\t.parrafo {\n\t\t\t\t\tmargin-top: 20px;\n\t\t\t\t}\n\n\t\t\t</style>\n\t        <div class="modal-header">\n\t            <h3 class="modal-title" id="modal-title">{{titulo}}</h3>\n\t        </div>\n\t        <div class="modal-body" id="modal-body">\n\t           <p class="parrafo" ng-repeat="parrafo in parrafos">\n\t           \t\t{{ parrafo}}\n\t           </p>\n\t        </div>\n\t    </script>\n\n\n\n\t\t'
+		template: '\n\t\t<p>\n\t\t\t<span>\n\t\t\t\t{{ resumen | limitTo: limite }}\n\t\t\t</span>\n\t\t\t<button \n\t\t\t\tng-click="mostrarParrafoCompleto()"\n\t\t\t\tng-if="resumen.length > limite"\n\t\t\t\ttype="button" \n\t\t\t\tclass="btn btn-link glyphicon glyphicon-option-horizontal">\t\n\t\t\t</button>\n\t\t</p>\n\n\n\t\t<script type="text/ng-template" id="myModalContent.html">\n\t\t\t<style>\n\t\t\t\t\n\t\t\t\t.modal-content {\n\t\t\t\t\tborder-radius: 0px;\n\t\t\t\t\tbackground: rgba(6, 70, 97, 0.95);\n\t\t\t\t\tcolor: white;\n\t\t\t\t\ttext-shadow: 1px 1px black;\n\t\t\t\t}\n\n\t\t\t\t.modal-body {\n\t\t\t\t\tpadding: 0px 40px 40px 40px;\n\t\t\t\t}\n\n\t\t\t\t.modal-title {\n\t\t\t\t\ttext-align: center;\n\t\t\t\t\tcolor: #fb9902;\n\t\t\t\t}\n\n\t\t\t\t.parrafo {\n\t\t\t\t\tmargin-top: 20px;\n\t\t\t\t}\n\n\t\t\t\t.modal-header {\n\t\t\t\t\tborder-bottom: 1px solid #fb9902;\n\t\t\t\t}\n\n\t\t\t</style>\n\t        <div class="modal-header">\n\t            <h3 class="modal-title" id="modal-title">{{titulo}}</h3>\n\t        </div>\n\t        <div class="modal-body" id="modal-body">\n\t           <p class="parrafo" ng-repeat="parrafo in parrafos">\n\t           \t\t{{ parrafo}}\n\t           </p>\n\t        </div>\n\t    </script>\n\n\n\n\t\t'
 	};
 }
 
@@ -42333,7 +42342,7 @@ function habilidad() {
 			skills: '='
 		},
 		controller: function controller($scope) {},
-		template: '\n\t\t<div class="col-xs-4">\n\t\t\t<div class="panel">\n\t\t\t \t<div class="panel-heading">\n\t\t\t \t\t<span class="panel-title pull-left">\n\t\t\t\t\t\t{{title}}\n\t\t            </span>\n\t\t\t \t\t<button class="btn btn-link pull-right" ng-click="show = !show">\n\t\t\t \t\t\t<span class="glyphicon glyphicon-plus"></span>\n\t\t\t \t\t</button>\n\t\t \t\t\t<div class="clearfix"></div>\n\t\t \t\t</div>\n\t\t  \t\t<ul class="list-group" ng-if="!show">\n\t\t\t\t\t<li class="list-group-item" \n\t\t\t\t\t\tng-repeat="skill in skills track by $index">\n\t\t\t\t  \t\t{{skill}}\n\t\t\t  \t\t</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\n\t\t'
+		template: '\n\t\t<style>\n\t\t\t.skills__content .panel .panel-heading {\n\t\t\t\tborder-bottom: 1px solid #fb9902;\n\t\t\t}\n\t\t</style>\n\t\t<div class="col-xs-4">\n\t\t\t<div class="panel">\n\t\t\t \t<div class="panel-heading">\n\t\t\t \t\t<span class="panel-title pull-left">\n\t\t\t\t\t\t{{title}}\n\t\t            </span>\n\t\t\t \t\t<button class="btn btn-link pull-right" ng-click="show = !show">\n\t\t\t \t\t\t<span class="glyphicon glyphicon-plus"></span>\n\t\t\t \t\t</button>\n\t\t \t\t\t<div class="clearfix"></div>\n\t\t \t\t</div>\n\t\t  \t\t<ul class="list-group" ng-if="!show">\n\t\t\t\t\t<li class="list-group-item" \n\t\t\t\t\t\tng-repeat="skill in skills track by $index">\n\t\t\t\t  \t\t{{skill}}\n\t\t\t  \t\t</li>\n\t\t\t\t</ul>\n\t\t\t</div>\n\t\t</div>\n\t\t'
 	};
 }
 

@@ -157,7 +157,7 @@ input[type="submit"],input[type="reset"],.w3ls_footer_grid_leftl,.w3ls_footer_gr
 }
 /*-- //header --*/
 #home {
-    background: url(../images/banner.jpg) no-repeat center top;
+    background: url(../images/3d-black-hexagons-wallpaper-61648.jpg) no-repeat center top;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -481,12 +481,13 @@ h3.tittle:after, h3.tittle:before {
 }
 /*-- /services --*/
 #services{
-    background: url(../images/serve.jpg) no-repeat center top;
+    /*background: url(../images/serve.jpg) no-repeat center top;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    -ms-background-size: cover;
+    -ms-background-size: cover;*/
+    background: #353537;
    min-height: 515px;
     padding-top: 4em;
 }
@@ -515,12 +516,13 @@ h3.w3l_head.two {
 /*-- //services --*/
 /*-- /skills --*/
 .skills{
-      background: url(../images/banner.jpg) no-repeat center top;
+    /*background: url(../images/banner.jpg) no-repeat center top;
     background-size: cover;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    -ms-background-size: cover;
+    -ms-background-size: cover;*/
+    background: #353537;
        min-height: 690px;
     padding-top: 9em;
 }

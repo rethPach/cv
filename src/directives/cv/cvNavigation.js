@@ -38,10 +38,6 @@ function cvNavigation() {
 					<div class="collapse navbar-collapse nav-wil" id="bs-example-navbar-collapse-1">
 						<nav class="cl-effect-1" id="cl-effect-1">
 							<ul class="nav navbar-nav">
-								<link-scroll 
-									href="{{'about'}}" 
-									text="{{'Sobre Mi'}}">
-								</link-scroll>
 
 								<link-scroll 
 									href="{{'services'}}" 

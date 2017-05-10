@@ -1,7 +1,14 @@
 function cvAbout() {
 	return {
-		link: function() {
-
+		link: function($scope) {
+			$scope.developer = {
+				nombre: 'Nazareth Pacheco',
+				edad: 27,
+				direccion: 'Caracas, Venezuela',
+				email: 'nazarethj.pacheco@gmail.com',
+				mailto: 'mailto:nazarethj.pacheco@gmail.com',
+				hobbies: 'Cocinar, Baloncesto, Robotica, Comics, Cine, Open Ecology.'
+			}
 		},
 
 		template: `
@@ -19,7 +26,7 @@ function cvAbout() {
 			}
 			
 			.w3ls-agile-left-info a, .education-agile-w3l-year h6 {
-				color: #525252;
+				color: #fb9902;
 			}
 
 			.education-agile-w3l-year {
@@ -30,11 +37,23 @@ function cvAbout() {
 				color: #fb9902
 			}
 
+			.w3ls-agile-left-info p {
+				color: #064661
+			}
+
+			.w3ls-agile-left-info h4, .social-info h4 {
+				color: #525252;
+			}
+
+			.w3ls-agile-left-info a:hover, .education-agile-w3l-year h6:hover {
+				text-decoration: underline;
+			}
+
 		</style>
 		<div class="about" id="about">
 			<div class="container">
 				<h3 class="w3l_head">Sobre Mi</h3>
-				<p class="w3ls_head_para">Informacion Personal.</p>
+				<p class="w3ls_head_para">Información Personal.</p>
 				<div class="w3l-grids-about">
 					<div class="col-md-5 w3ls-ab-right">
 						<div class="agile-about-right-img">
@@ -44,27 +63,27 @@ function cvAbout() {
 					<div class="col-md-7 w3ls-agile-left">
 						<div class="w3ls-agile-left-info">
 							<h4>Nombre</h4>
-							<p>Nazareth Pacheco</p>
+							<p>{{developer.nombre}}</p>
 						</div>
 						<div class="w3ls-agile-left-info">
-							<h4>Sexo</h4>
-							<p>Masculino</p>
+							<h4>Edad</h4>
+							<p>{{developer.edad}}</p>
 						</div>
 						<div class="w3ls-agile-left-info">
-							<h4>Direccion</h4>
-							<p>Caracas</p>
+							<h4>Dirección</h4>
+							<p>{{developer.direccion}}</p>
 						</div>
 						<div class="w3ls-agile-left-info">
 							<h4>Email</h4>
 							<p>
-								<a href="mailto:nazarethj.pacheco@gmail.com">
-									nazarethj.pacheco@gmail.com
+								<a href="{{developer.mailto}}">
+									{{developer.email}}
 								</a>
 							</p>
 						</div>
 						<div class="w3ls-agile-left-info">
 							<h4>Hobbies</h4>
-							<p>Cocinar, Baloncesto, Robotica, Comics, Cine, Open Ecology.</p>
+							<p>{{developer.hobbies}}</p>
 						</div>
 					</div>
 					<div class="clearfix"> </div>

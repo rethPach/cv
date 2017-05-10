@@ -39,7 +39,6 @@ function cutParrafo() {
 			}
 		},
 		template: `
-
 		<p>
 			<span>
 				{{ resumen | limitTo: limite }}
@@ -74,6 +73,10 @@ function cutParrafo() {
 
 				.parrafo {
 					margin-top: 20px;
+				}
+
+				.modal-header {
+					border-bottom: 1px solid #fb9902;
 				}
 
 			</style>

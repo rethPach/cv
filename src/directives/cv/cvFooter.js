@@ -9,8 +9,8 @@ function cvFooter() {
 
 			$scope.email = {
 				key: 'Email',
-				value: 'naiger67@gmail.com',
-				mailto: 'mailto:naiger67@gmail.com'
+				value: 'nazarethj.pacheco@gmail.com',
+				mailto: 'nazarethj.pacheco@gmail.com'
 			}
 
 			$scope.llamar = {
@@ -21,10 +21,6 @@ function cvFooter() {
 		template: `
 		<style>
 
-			.w3l_footer {
-				background: #525252
-			}
-
 			.w3ls_footer_grid_leftr h4 {
 				
 			}
@@ -34,11 +30,19 @@ function cvFooter() {
 			}
 
 			.w3ls_footer_grid_leftl {
-				background: #064661;
+				background: #fb9902;
 			}
 
 			.w3ls_footer_grid_left:hover .w3ls_footer_grid_leftr h4 {
 				color: #fb9902
+			}
+
+			.w3ls_footer_grid_left {
+				background: #353537;
+			}
+
+			.w3l_footer {
+				background: #064661
 			}
 
 		</style>

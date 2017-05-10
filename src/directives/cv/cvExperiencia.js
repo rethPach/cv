@@ -4,7 +4,7 @@ function cvExperiencia() {
 			$scope.experiencias = [{
 				empresa: 'Medinet',
 				duracion: 'Enero 2017 - Abril 2017',
-				cargo: 'Fullstack-web developer team leader, scrum master padawan.',
+				cargo: 'Fullstack-web developer team leader.',
 				works: [{
 
 					descripcion: [
@@ -24,9 +24,10 @@ function cvExperiencia() {
 						[
 							'Desarrollo de un CMS Ecommerce con la integración de una', 
 				   			'pasarela de pago (123Pago). El negocio consistía en venta de', 
-				   			'boletos, control del inventario de: boletos vendidos,', 
-				   			'disponibles, ofertados; validación del boleto a través de un', 
+				   			'boletos, control del inventario de boletos vendidos,', 
+				   			'disponibles, ofertados y validación del boleto a través de un', 
 				   			'código seguridad generado por la aplicación.'
+
 						].join(' '),
 
 						[
@@ -41,7 +42,7 @@ function cvExperiencia() {
 			}, {
 				empresa: 'Soluciones As',
 				duracion: 'Mayo 2016 - Enero 2017',
-				cargo: 'Fullstack-web developer team leader, scrum master padawan.',
+				cargo: 'Fullstack-web developer team leader.',
 				works: [{
 					descripcion: [
 						[
@@ -49,17 +50,17 @@ function cvExperiencia() {
 				   			'eventos, para cliente en argentina. El negocio era bastante', 
 				   			'similar al mencionado en la experiencia anterior,', 
 				   			'con la particularidad que la validación del boleto', 
-				   			'era a través de un app Mobile que desarrolle con Ionic esta', 
-				   			'escaneaba un código Qr asociado a una entrada y Validadaba la entradada.',
-				   			'Adicionalmente incluía una Session Bussiness Inteligence que mostraba', 
-				   			'información relacionada a:',
-				   				'boletos vendidos,', 
-				  				'boletos ofertados y boletos disponibles.',
-				  				'Reportes de asistencia para un evento.'
+				   			'era a través de un app Mobile desarrollada con Ionic que', 
+				   			'escaneaba un código Qr asociado a una entrada.',
+				   			'Adicionalmente incluía una Session Bussiness Inteligence', 
+				   			'que mostraba información relacionada a boletos vendidos,',
+			   				'ofertados y disponibles para un evento,',
+			   				'ademas de ofrecer control de asistencia.' 
+
 						].join(' ')
 					],
 
-					herramientas: 'Javascript, Laravel 5,Angular Js como capa de presentación.'
+					herramientas: 'PHP, Javascript, Laravel 5,Angular Js como capa de presentación.'
 				}]
 			}, {
 				empresa: 'Freelance',
@@ -69,7 +70,7 @@ function cvExperiencia() {
 					descripcion: [
 						[
 							'Desarrollo de un ecommerce para venta y alquiler de', 
-				   			'equipos para ferreteria y construccion'
+				   			'equipos para ferreteria y construcción'
 						].join(' ')
 					],
 					herramientas: 'PHP, Javascript, Cake, Jquery.'
@@ -108,6 +109,14 @@ function cvExperiencia() {
 				border-top: 1px solid #ddd;
 			}
 
+			.education-agile-w3l-info h4{
+				color: #fb9902;
+			}
+
+			.education-agile-w3l-year h4 {
+				color: #064661;
+			}
+
 			.education-agile-w3l-info__content {
 				display: none;
 			}
@@ -121,7 +130,19 @@ function cvExperiencia() {
 			}
 
 			h3.w3l_head.three {
-				color: #525252
+				color: #064661
+			}
+
+			.education-agile-w3l-year {
+				border-left: 1px solid #fb9902;
+			}
+
+			.education-agile-w3l-year h6 {
+				color: #525252;
+			}
+
+			.btn-link {
+				color: #064661;
 			}
 			
 		</style>
