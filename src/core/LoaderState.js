@@ -3,17 +3,13 @@ function LoaderState(states) {
 }
 
 LoaderState.prototype = {
-
 	states: [],
-
 	setStates: function(states) {
 		this.states = states;
 	},
-
 	hasState: function() {
 		return this.states.length > 0;
 	},
-
 	load: function($stateProvider) {
 
 		if(!this.hasState()) return;
@@ -22,8 +18,6 @@ LoaderState.prototype = {
 			state($stateProvider);
 		});
 	}
-
-
 }
 
 module.exports = {

@@ -1,27 +1,29 @@
 var angular = require('angular');
 var factory = require('./core/ModuleFactory');
+var loaderState = require('./core/LoaderState');
 
 factory.create(angular, {
 	name: 'app',
 	dependencies: [
-		require('angular-bootstrap-npm')
+		require('angular-ui-bootstrap'),
+		require('angular-ui-router')
 	],
 	directives: [
-	
-		require('./directives/cv/cvMain'),
-		require('./directives/cv/cvNavigation'),
-		require('./directives/cv/cvAbout'),
-		require('./directives/cv/cvService'),
-		require('./directives/cv/cvExperiencia'),
-		require('./directives/cv/cvFooter'),
-		require('./directives/cv/cvLenguajes'),
-		require('./directives/cv/cvAptitudes'),
+		require('./directives/hola-mundo'),
+		require('./directives/toggle-bottom'),
+	],
+	factories: [
+		require('./services/ticket-http')
+	],
+	run: function($state) {
+		$state.go('main.usuario-list');
+	},
+	config: function($stateProvider) {
+		var states = [
+			require('./states/layouts/main'),
+			require('./states/usuarios/usuario-list'),
+		];
 
-		require('./directives/utils/cutParrafo'),
-		require('./directives/utils/herramientaHelper'),
-		require('./directives/utils/linkScroll'),
-		require('./directives/utils/experienciaHelper'),
-		require('./directives/utils/descripcionExperiencia'),
-		require('./directives/utils/habilidad')
-	]
+		loaderState.load(states, $stateProvider);
+	}
 });

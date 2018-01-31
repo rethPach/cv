@@ -20,11 +20,11 @@ elixir(function(mix) {
 
 		.styles([
 			'dist/css/bootstrap.css',
-			'dist/css/style.css',
-			'dist/css/cm-overlay.css',
 			'dist/css/font-awesome.css',
-		], 'dist/vendors/template.css')
+			'dist/css/simple-sidebar.css'
+		], 'dist/vendors/vendor.css')
 
-		.browserify('app.js', 'dist/js/app.js', 'src');
+		//.scripts([], 'dist/vendors/vendor.js')
+		.browserify('app.js', 'dist/app.js', 'src');
 		
 });
